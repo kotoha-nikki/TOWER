@@ -19,10 +19,8 @@ export async function generateMetadata({ params }: ProfilePageProps) {
   const tenant = getTenantBySlug(slug);
 
   if (!tenant) {
-    const dictionary = getDictionary("en");
-
     return {
-      title: dictionary.profile.notFoundTitle
+      title: getDictionary("en").profile.notFoundTitle
     };
   }
 
@@ -32,7 +30,7 @@ export async function generateMetadata({ params }: ProfilePageProps) {
   };
 }
 
-export default async function TenantProfilePage({ params }: ProfilePageProps) {
+export default async function EnglishTenantProfilePage({ params }: ProfilePageProps) {
   const { slug } = await params;
-  return <LocalizedTenantProfilePage slug={slug} locale="en" routePrefix="" />;
+  return <LocalizedTenantProfilePage slug={slug} locale="en" routePrefix="/en" />;
 }

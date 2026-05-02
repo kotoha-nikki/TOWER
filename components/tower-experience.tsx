@@ -2,14 +2,23 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { getDictionary, type Locale } from "@/lib/i18n";
 import type { Floor, Tenant } from "@/lib/tower-data";
 
 type TowerExperienceProps = {
   floors: Floor[];
   tenants: Tenant[];
+  locale: Locale;
+  routePrefix?: "" | "/en" | "/ja";
 };
 
-export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
+export function TowerExperience({
+  floors,
+  tenants,
+  locale,
+  routePrefix = ""
+}: TowerExperienceProps) {
+  const dictionary = getDictionary(locale);
   const [selectedFloor, setSelectedFloor] = useState(23);
   const [directoryOpen, setDirectoryOpen] = useState(false);
 
@@ -20,21 +29,21 @@ export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
   );
 
   return (
-    <section className="tower-shell" aria-label="Tower map experience">
+    <section className="tower-shell" aria-label={dictionary.tower.ariaLabel}>
       <div className="tower-toolbar">
         <div>
-          <p className="eyebrow">Interactive map</p>
-          <h2>Click a floor to inspect its tenants.</h2>
+          <p className="eyebrow">{dictionary.tower.eyebrow}</p>
+          <h2>{dictionary.tower.title}</h2>
         </div>
         <button type="button" onClick={() => setDirectoryOpen(true)}>
-          Open directory
+          {dictionary.tower.openDirectory}
         </button>
       </div>
 
       <div className="tower-grid">
         <div className="tower-visual">
-          <img src="/banner.png" alt="Draft drawing of the Tower Map building" />
-          <div className="floor-rail" aria-label="Floor selector">
+          <img src="/banner.png" alt={dictionary.tower.imageAlt} />
+          <div className="floor-rail" aria-label={dictionary.tower.floorSelector}>
             {floors.map((floor) => (
               <button
                 key={floor.floorNumber}
@@ -50,9 +59,12 @@ export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
         </div>
 
         <aside className="floor-panel">
-          <p className="eyebrow">Floor {activeFloor.floorNumber}</p>
-          <h2>{activeFloor.label}</h2>
+          <p className="eyebrow">
+            {dictionary.tower.floorLabel} {activeFloor.floorNumber}
+          </p>
+          <h2>{dictionary.floorLabels[activeFloor.floorNumber] ?? activeFloor.label}</h2>
           <p>{activeFloor.narrative}</p>
+          {locale === "ja" ? <p className="fallback-note">{dictionary.fallback.note}</p> : null}
 
           <div className="signal-row">
             {activeFloor.signalBands.map((signal) => (
@@ -62,16 +74,20 @@ export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
 
           <div className="tenant-list">
             <div className="tenant-list-heading">
-              <span>Tenants</span>
+              <span>{dictionary.tower.tenantsLabel}</span>
               <strong>{tenantsOnFloor.length}</strong>
             </div>
             {tenantsOnFloor.length > 0 ? (
-              tenantsOnFloor.map((tenant) => <TenantCard key={tenant.slug} tenant={tenant} />)
+              tenantsOnFloor.map((tenant) => (
+                <TenantCard
+                  key={tenant.slug}
+                  tenant={tenant}
+                  locale={locale}
+                  routePrefix={routePrefix}
+                />
+              ))
             ) : (
-              <p className="empty-state">
-                No public sample tenants on this floor yet. The full registry arrives in a later
-                construction layer.
-              </p>
+              <p className="empty-state">{dictionary.tower.emptyState}</p>
             )}
           </div>
         </aside>
@@ -86,16 +102,22 @@ export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
           >
             <div className="directory-head">
               <div>
-                <p className="eyebrow">Directory</p>
-                <h2>Sample tenant registry</h2>
+                <p className="eyebrow">{dictionary.tower.directoryEyebrow}</p>
+                <h2>{dictionary.tower.directoryTitle}</h2>
               </div>
               <button type="button" onClick={() => setDirectoryOpen(false)}>
-                Close
+                {dictionary.tower.close}
               </button>
             </div>
             <div className="directory-list">
               {tenants.map((tenant) => (
-                <TenantCard key={tenant.slug} tenant={tenant} compact />
+                <TenantCard
+                  key={tenant.slug}
+                  tenant={tenant}
+                  locale={locale}
+                  routePrefix={routePrefix}
+                  compact
+                />
               ))}
             </div>
           </aside>
@@ -105,18 +127,36 @@ export function TowerExperience({ floors, tenants }: TowerExperienceProps) {
   );
 }
 
-function TenantCard({ tenant, compact = false }: { tenant: Tenant; compact?: boolean }) {
+function TenantCard({
+  tenant,
+  locale,
+  routePrefix = "",
+  compact = false
+}: {
+  tenant: Tenant;
+  locale: Locale;
+  routePrefix?: "" | "/en" | "/ja";
+  compact?: boolean;
+}) {
+  const dictionary = getDictionary(locale);
+  const categoryLabel = dictionary.categoryLabels[tenant.category] ?? tenant.category;
+  const profileHref = `${routePrefix}/profile/${tenant.slug}`;
+
   return (
-    <Link className={compact ? "tenant-card compact-card" : "tenant-card"} href={`/profile/${tenant.slug}`}>
+    <Link className={compact ? "tenant-card compact-card" : "tenant-card"} href={profileHref}>
       <div>
         <strong>{tenant.name}</strong>
         <span>{tenant.ticker}</span>
       </div>
       <p>{tenant.description}</p>
       <footer>
-        <span>{tenant.category}</span>
-        <span>Heat {tenant.heat}</span>
-        <span>FL {tenant.floor}</span>
+        <span>{categoryLabel}</span>
+        <span>
+          {dictionary.tower.heatLabel} {tenant.heat}
+        </span>
+        <span>
+          {dictionary.tower.floorAbbr} {tenant.floor}
+        </span>
       </footer>
     </Link>
   );

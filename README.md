@@ -56,6 +56,8 @@ will be added in staged releases as the building rises.
 ```text
 .
 +-- app/
+|   +-- en/
+|   +-- ja/
 |   +-- methodology/
 |   +-- profile/
 |   +-- globals.css
@@ -72,12 +74,14 @@ will be added in staged releases as the building rises.
 |   +-- architecture.md
 |   +-- data-model.md
 |   +-- design-system.md
+|   +-- i18n.md
 |   +-- methodology.md
 |   +-- project-overview.md
 |   +-- roadmap.md
 +-- public/
 |   +-- banner.png
 +-- lib/
+|   +-- i18n.ts
 |   +-- tower-data.ts
 +-- .env.example
 +-- .gitignore

@@ -8,6 +8,6 @@ export const metadata = {
   description: dictionary.methodology.metadataDescription
 };
 
-export default function MethodologyPage() {
+export default function EnglishMethodologyPage() {
   return <LocalizedMethodologyPage locale="en" />;
 }
