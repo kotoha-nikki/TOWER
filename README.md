@@ -55,7 +55,14 @@ will be added in staged releases as the building rises.
 
 ```text
 .
++-- data/
+|   +-- categories.json
+|   +-- floors.json
+|   +-- tenants.sample.json
 +-- docs/
+|   +-- architecture.md
+|   +-- data-model.md
+|   +-- design-system.md
 |   +-- methodology.md
 |   +-- project-overview.md
 |   +-- roadmap.md

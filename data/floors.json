@@ -1,0 +1,209 @@
+[
+  {
+    "floorNumber": 23,
+    "slug": "penthouse",
+    "label": "Penthouse",
+    "tier": "penthouse",
+    "narrative": "The highest-signal layer of the tower: maximum visibility, liquidity, and ecosystem gravity.",
+    "signalBands": ["network gravity", "market leadership", "canonical identity"],
+    "primaryCategories": ["Network"]
+  },
+  {
+    "floorNumber": 22,
+    "slug": "cornerstones",
+    "label": "Cornerstones",
+    "tier": "upper",
+    "narrative": "Long-running protocols and institutions that help hold the building together.",
+    "signalBands": ["continuity", "infrastructure", "trusted presence"],
+    "primaryCategories": ["Infrastructure", "DeFi"]
+  },
+  {
+    "floorNumber": 21,
+    "slug": "liquidity-suite",
+    "label": "Liquidity Suite",
+    "tier": "upper",
+    "narrative": "Deep liquidity, exchange visibility, and high-traffic ecosystem routes.",
+    "signalBands": ["liquidity", "trading flow", "market depth"],
+    "primaryCategories": ["DeFi", "Infrastructure"]
+  },
+  {
+    "floorNumber": 20,
+    "slug": "casino-floor",
+    "label": "Casino Floor",
+    "tier": "upper",
+    "narrative": "High-volume cultural assets and speculative rooms with major public attention.",
+    "signalBands": ["meme velocity", "volume", "public attention"],
+    "primaryCategories": ["Meme", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 19,
+    "slug": "major-names",
+    "label": "Major Names",
+    "tier": "upper",
+    "narrative": "Recognizable projects with large market gravity and durable ecosystem relevance.",
+    "signalBands": ["brand visibility", "market gravity", "continuity"],
+    "primaryCategories": ["DeFi", "Infrastructure", "DePIN"]
+  },
+  {
+    "floorNumber": 18,
+    "slug": "meme-suite",
+    "label": "Meme Suite",
+    "tier": "upper",
+    "narrative": "Cultural tenants that shape timeline attention and Solana-native memory.",
+    "signalBands": ["culture", "recognition", "social heat"],
+    "primaryCategories": ["Meme"]
+  },
+  {
+    "floorNumber": 17,
+    "slug": "ai-floor",
+    "label": "AI Floor",
+    "tier": "upper",
+    "narrative": "AI agents, automation narratives, and high-signal experimental software.",
+    "signalBands": ["AI narrative", "experimentation", "technical curiosity"],
+    "primaryCategories": ["AI", "Infrastructure"]
+  },
+  {
+    "floorNumber": 16,
+    "slug": "compute-wing",
+    "label": "Yield + Compute Wing",
+    "tier": "upper",
+    "narrative": "DePIN, compute, yield, and utility tenants with visible ecosystem roles.",
+    "signalBands": ["utility", "compute", "network demand"],
+    "primaryCategories": ["DePIN", "DeFi"]
+  },
+  {
+    "floorNumber": 15,
+    "slug": "protocol-row",
+    "label": "Protocol Row",
+    "tier": "mid",
+    "narrative": "Working protocol tenants with active products and recognizable market presence.",
+    "signalBands": ["product usage", "protocol activity", "market presence"],
+    "primaryCategories": ["DeFi", "Infrastructure", "DePIN"]
+  },
+  {
+    "floorNumber": 14,
+    "slug": "culture-row",
+    "label": "Culture Row",
+    "tier": "mid",
+    "narrative": "Cultural rooms with enough heat to be visible beyond their original communities.",
+    "signalBands": ["meme spread", "community", "recognition"],
+    "primaryCategories": ["Meme", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 13,
+    "slug": "agent-labs",
+    "label": "Agent Labs",
+    "tier": "mid",
+    "narrative": "Experimental agents, automation projects, and software-native narratives.",
+    "signalBands": ["AI", "experiments", "builder attention"],
+    "primaryCategories": ["AI", "Infrastructure"]
+  },
+  {
+    "floorNumber": 12,
+    "slug": "consumer-deck",
+    "label": "Consumer Deck",
+    "tier": "mid",
+    "narrative": "Apps, marketplaces, profiles, social layers, and consumer-facing products.",
+    "signalBands": ["consumer usage", "identity", "distribution"],
+    "primaryCategories": ["NFT / Consumer", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 11,
+    "slug": "game-rooms",
+    "label": "Game Rooms",
+    "tier": "mid",
+    "narrative": "Playable economies and entertainment tenants with visible community loops.",
+    "signalBands": ["gaming", "worldbuilding", "community retention"],
+    "primaryCategories": ["Gaming", "NFT / Consumer"]
+  },
+  {
+    "floorNumber": 10,
+    "slug": "active-midcap",
+    "label": "Active Midcap",
+    "tier": "mid",
+    "narrative": "Tenants with enough activity to matter, but still below the upper floors.",
+    "signalBands": ["activity", "liquidity", "watchlist relevance"],
+    "primaryCategories": ["Meme", "DeFi", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 9,
+    "slug": "workshops",
+    "label": "Workshops",
+    "tier": "mid",
+    "narrative": "Builder rooms, early products, and smaller networks with real direction.",
+    "signalBands": ["builders", "early traction", "specialized use"],
+    "primaryCategories": ["Infrastructure", "Gaming", "NFT / Consumer"]
+  },
+  {
+    "floorNumber": 8,
+    "slug": "street-signal",
+    "label": "Street Signal",
+    "tier": "lower",
+    "narrative": "Lower-floor tenants that still create visible movement from the street.",
+    "signalBands": ["community motion", "small liquidity", "watchlist signal"],
+    "primaryCategories": ["Meme", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 7,
+    "slug": "early-agents",
+    "label": "Early Agents",
+    "tier": "lower",
+    "narrative": "Early AI and software narratives that are still searching for durable shape.",
+    "signalBands": ["experimentation", "AI culture", "early signal"],
+    "primaryCategories": ["AI", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 6,
+    "slug": "watchlist-floor",
+    "label": "Watchlist Floor",
+    "tier": "lower",
+    "narrative": "Emerging tenants with enough activity to be tracked but not yet established.",
+    "signalBands": ["emerging", "watchlist", "thin liquidity"],
+    "primaryCategories": ["Meme", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 5,
+    "slug": "small-studios",
+    "label": "Small Studios",
+    "tier": "lower",
+    "narrative": "Small but legible rooms where niche communities and experiments live.",
+    "signalBands": ["niche", "early community", "experiments"],
+    "primaryCategories": ["Culture / Apps", "NFT / Consumer"]
+  },
+  {
+    "floorNumber": 4,
+    "slug": "micro-culture",
+    "label": "Micro Culture",
+    "tier": "lower",
+    "narrative": "Micro-cap culture with limited liquidity but visible identity.",
+    "signalBands": ["micro cap", "identity", "small communities"],
+    "primaryCategories": ["Meme", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 3,
+    "slug": "new-checkins",
+    "label": "New Check-ins",
+    "tier": "lower",
+    "narrative": "Fresh rooms, new narratives, and tenants that may move if signal grows.",
+    "signalBands": ["new", "volatile", "experimental"],
+    "primaryCategories": ["Meme", "AI", "Culture / Apps"]
+  },
+  {
+    "floorNumber": 2,
+    "slug": "basement-labs",
+    "label": "Basement Labs",
+    "tier": "lobby",
+    "narrative": "Low-visibility experiments that are documented but not yet prominent.",
+    "signalBands": ["low visibility", "research", "early experiments"],
+    "primaryCategories": ["Culture / Apps"]
+  },
+  {
+    "floorNumber": 1,
+    "slug": "lobby",
+    "label": "Lobby",
+    "tier": "lobby",
+    "narrative": "The entrance layer for new arrivals, pending tenants, and future review.",
+    "signalBands": ["intake", "pending review", "new arrivals"],
+    "primaryCategories": ["Culture / Apps", "Meme"]
+  }
+]

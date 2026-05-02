@@ -1,0 +1,65 @@
+[
+  {
+    "id": "network",
+    "label": "Network",
+    "description": "Base layer assets, execution infrastructure, and core ecosystem primitives.",
+    "defaultFloorRange": [21, 23],
+    "accent": "ink"
+  },
+  {
+    "id": "infrastructure",
+    "label": "Infrastructure",
+    "description": "Oracles, bridges, developer tools, data layers, and protocol infrastructure.",
+    "defaultFloorRange": [13, 22],
+    "accent": "red"
+  },
+  {
+    "id": "defi",
+    "label": "DeFi",
+    "description": "Trading, liquidity, lending, yield, and on-chain financial applications.",
+    "defaultFloorRange": [10, 21],
+    "accent": "teal"
+  },
+  {
+    "id": "meme",
+    "label": "Meme",
+    "description": "Culture-first tokens with strong social identity and narrative velocity.",
+    "defaultFloorRange": [3, 20],
+    "accent": "gold"
+  },
+  {
+    "id": "ai",
+    "label": "AI",
+    "description": "AI agents, automation narratives, inference-adjacent tools, and agent culture.",
+    "defaultFloorRange": [7, 18],
+    "accent": "violet"
+  },
+  {
+    "id": "depin",
+    "label": "DePIN",
+    "description": "Physical infrastructure networks, compute, mapping, wireless, and storage.",
+    "defaultFloorRange": [8, 18],
+    "accent": "green"
+  },
+  {
+    "id": "nft-consumer",
+    "label": "NFT / Consumer",
+    "description": "Consumer apps, creator tools, collectibles, marketplaces, and social surfaces.",
+    "defaultFloorRange": [5, 16],
+    "accent": "blue"
+  },
+  {
+    "id": "gaming",
+    "label": "Gaming",
+    "description": "Games, game economies, playable worlds, and entertainment tokens.",
+    "defaultFloorRange": [4, 14],
+    "accent": "orange"
+  },
+  {
+    "id": "culture-apps",
+    "label": "Culture / Apps",
+    "description": "Applications, communities, experimental products, and narrative clusters.",
+    "defaultFloorRange": [1, 15],
+    "accent": "gray"
+  }
+]
