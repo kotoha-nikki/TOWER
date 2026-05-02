@@ -1,0 +1,587 @@
+:root {
+  --paper: #f4eddf;
+  --paper-deep: #e5d9c2;
+  --ink: #11100e;
+  --muted: #6d6254;
+  --line: #b9aa91;
+  --line-strong: #2a251e;
+  --red: #ec4b37;
+  --gold: #f4b63f;
+  --teal: #2f8584;
+  --shadow: rgba(30, 25, 18, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  background:
+    linear-gradient(90deg, rgba(17, 16, 14, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(17, 16, 14, 0.035) 1px, transparent 1px),
+    var(--paper);
+  background-size: 48px 48px;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px clamp(18px, 4vw, 56px);
+  border-bottom: 1px solid var(--line-strong);
+  background: rgba(244, 237, 223, 0.9);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.brand span {
+  color: var(--red);
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.12em;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--ink);
+}
+
+.hero-shell,
+.page-shell,
+.tower-shell {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+}
+
+.hero-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 28px;
+  padding: clamp(42px, 7vw, 86px) 0 28px;
+  align-items: flex-end;
+}
+
+.hero-copy h1,
+.page-heading h1 {
+  margin: 0;
+  max-width: 900px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(62px, 13vw, 164px);
+  line-height: 0.78;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-copy p:not(.eyebrow),
+.page-heading p:not(.eyebrow) {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--red);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero-status {
+  border: 1px solid var(--line-strong);
+  padding: 18px;
+  background: rgba(255, 249, 235, 0.72);
+  box-shadow: 7px 7px 0 var(--line-strong);
+}
+
+.hero-status span,
+.hero-status strong {
+  display: block;
+}
+
+.hero-status span {
+  color: var(--red);
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+}
+
+.hero-status p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.tower-shell {
+  padding: 30px 0 76px;
+}
+
+.tower-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-end;
+  border-top: 1px solid var(--line-strong);
+  padding-top: 24px;
+  margin-bottom: 22px;
+}
+
+.tower-toolbar h2,
+.floor-panel h2,
+.directory-head h2,
+.method-section h2,
+.profile-hero h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1;
+}
+
+.tower-toolbar button,
+.directory-head button {
+  border: 1px solid var(--line-strong);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.tower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.tower-visual {
+  position: relative;
+  min-height: 680px;
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+  background: #fff8e8;
+  box-shadow: 10px 10px 0 var(--line-strong);
+}
+
+.tower-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  display: block;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(0.82);
+}
+
+.floor-rail {
+  position: absolute;
+  inset: 14px auto 14px 14px;
+  display: grid;
+  grid-template-rows: repeat(23, minmax(18px, 1fr));
+  width: 74px;
+  border: 1px solid rgba(17, 16, 14, 0.45);
+  background: rgba(244, 237, 223, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.floor-rail button {
+  border: 0;
+  border-bottom: 1px solid rgba(17, 16, 14, 0.18);
+  background: transparent;
+  color: rgba(17, 16, 14, 0.62);
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.floor-rail button:hover,
+.floor-rail button.active {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.floor-panel,
+.quote-panel,
+.profile-details article,
+.method-grid article,
+.category-grid article {
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 249, 235, 0.72);
+}
+
+.floor-panel {
+  position: sticky;
+  top: 92px;
+  padding: 22px;
+}
+
+.floor-panel p {
+  color: var(--muted);
+}
+
+.signal-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.signal-row span,
+.tenant-card footer span {
+  border: 1px solid var(--line);
+  padding: 5px 7px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.tenant-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tenant-list-heading {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.tenant-card {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  background: rgba(244, 237, 223, 0.72);
+}
+
+.tenant-card:hover {
+  border-color: var(--line-strong);
+  transform: translate(-1px, -1px);
+}
+
+.tenant-card div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tenant-card div span {
+  color: var(--red);
+  font-family: "Courier New", monospace;
+}
+
+.tenant-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.tenant-card footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.empty-state {
+  border: 1px dashed var(--line);
+  padding: 14px;
+}
+
+.directory-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(17, 16, 14, 0.28);
+}
+
+.directory-sheet {
+  width: min(440px, 100vw);
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
+  border-left: 1px solid var(--line-strong);
+  background: var(--paper);
+}
+
+.directory-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.directory-list {
+  display: grid;
+  gap: 10px;
+}
+
+.compact-card {
+  padding: 12px;
+}
+
+.page-shell {
+  padding: clamp(42px, 7vw, 76px) 0;
+}
+
+.page-heading {
+  margin-bottom: 42px;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.method-grid article,
+.category-grid article,
+.profile-details article {
+  padding: 18px;
+}
+
+.method-grid span {
+  color: var(--red);
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+}
+
+.method-grid h2,
+.category-grid h3 {
+  margin: 12px 0 8px;
+}
+
+.method-grid p,
+.category-grid p,
+.profile-details p {
+  color: var(--muted);
+}
+
+.method-section {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 28px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.floor-list.compact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.floor-list.compact div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+}
+
+.floor-list strong {
+  font-family: "Courier New", monospace;
+  color: var(--red);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.profile-shell {
+  max-width: 920px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.profile-hero {
+  margin-bottom: 34px;
+}
+
+.profile-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.profile-title-row h1 {
+  margin: 0;
+}
+
+.profile-title-row span {
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 8px 12px;
+  font-family: "Courier New", monospace;
+}
+
+.profile-hero p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 20px;
+  max-width: 760px;
+}
+
+.quote-panel {
+  padding: 22px;
+  margin-bottom: 24px;
+  border-left: 4px solid var(--red);
+}
+
+.quote-panel blockquote {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metric-grid article {
+  border: 1px solid var(--line);
+  padding: 14px;
+  background: rgba(255, 249, 235, 0.54);
+}
+
+.metric-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--red);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.metric-grid strong {
+  font-family: "Courier New", monospace;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 960px) {
+  .hero-shell,
+  .tower-grid,
+  .method-section {
+    grid-template-columns: 1fr;
+  }
+
+  .floor-panel {
+    position: static;
+  }
+
+  .method-grid,
+  .category-grid,
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-header nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-copy h1,
+  .page-heading h1 {
+    font-size: clamp(52px, 18vw, 82px);
+  }
+
+  .tower-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tower-visual,
+  .tower-visual img {
+    min-height: 540px;
+  }
+
+  .floor-rail {
+    width: 62px;
+    inset: 10px auto 10px 10px;
+  }
+
+  .floor-rail button {
+    font-size: 10px;
+  }
+
+  .method-grid,
+  .category-grid,
+  .metric-grid,
+  .profile-details,
+  .floor-list.compact {
+    grid-template-columns: 1fr;
+  }
+}

@@ -55,6 +55,15 @@ will be added in staged releases as the building rises.
 
 ```text
 .
++-- app/
+|   +-- methodology/
+|   +-- profile/
+|   +-- globals.css
+|   +-- layout.tsx
+|   +-- page.tsx
++-- components/
+|   +-- site-header.tsx
+|   +-- tower-experience.tsx
 +-- data/
 |   +-- categories.json
 |   +-- floors.json
@@ -68,12 +77,17 @@ will be added in staged releases as the building rises.
 |   +-- roadmap.md
 +-- public/
 |   +-- banner.png
++-- lib/
+|   +-- tower-data.ts
 +-- .env.example
 +-- .gitignore
 +-- CONTRIBUTING.md
 +-- LICENSE
++-- next.config.mjs
++-- package.json
 +-- README.md
 +-- SECURITY.md
++-- tsconfig.json
 ```
 
 ## Builder Note
