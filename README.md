@@ -98,7 +98,18 @@ will be added in staged releases as the building rises.
 
 まだ建設中です。
 
-The tower is still a sketch. The floors, tenants, and public rooms will be built step by step.
+この塔は、少しずつ階を増やしていきます。
+まだ空いている部屋も、これから住人が入ってくる予定です。
+
+The tower is still a sketch. Floors, tenants, public rooms, and community features
+will be built step by step.
+
+## Japanese Layer
+
+Tower Map is English-first for code and technical documentation, but Japanese is
+part of the public product surface.
+
+日本語レイヤーは、ただの翻訳ではなく、この塔を少しやわらかく読むための入口です。
 
 ## Links
 
