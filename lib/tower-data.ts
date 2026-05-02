@@ -1,6 +1,6 @@
 import categoriesJson from "@/data/categories.json";
 import floorsJson from "@/data/floors.json";
-import tenantsJson from "@/data/tenants.sample.json";
+import tenantsJson from "@/data/tenants.json";
 
 export type Floor = {
   floorNumber: number;
@@ -26,13 +26,28 @@ export type Tenant = {
   ticker: string;
   floor: number;
   category: string;
+  sourceCategory?: string;
   description: string;
+  descriptionTokens?: Record<string, string | number> | null;
   heat: number;
-  marketCapTier: "Mega" | "Large" | "Mid-Large" | "Mid" | "Small-Mid" | "Emerging" | "Micro";
+  marketCapTier:
+    | "Mega"
+    | "Large"
+    | "Mid-Large"
+    | "Medium"
+    | "Mid"
+    | "Small-Mid"
+    | "Small"
+    | "Emerging"
+    | "Micro";
   poolTier: "Large" | "Medium" | "Small" | "Unknown";
-  coingeckoId?: string;
+  change24h?: number | null;
+  direction?: "up" | "down" | "flat" | null;
+  coingeckoId?: string | null;
   contractAddress: string | null;
   contractStatus: "verified" | "pending-verification" | "not-applicable";
+  sourceFloorName?: string;
+  sourceUrl?: string;
   sources: string[];
 };
 

@@ -40,11 +40,12 @@ Tower Map will be built in visible stages, like a tower under construction.
 
 ## Stage 5: Tenant Registry Expansion
 
-- 350+ tenant registry
+- live tenant registry snapshot
 - floor placement
 - category tagging
 - source tracking
 - contract address verification status
+- registry metadata
 
 ## Stage 6: Wallet Identity
 

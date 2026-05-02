@@ -90,9 +90,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       title: "Who lives upstairs?",
       body:
         "Tower Map is a living high-rise map of Solana ecosystem signal. Every floor groups tenants by market gravity, cultural heat, liquidity visibility, and editorial relevance.",
-      statusVersion: "v1.0.3",
-      statusTitle: "Public shell online",
-      statusBody: "Wallet, saves, and tenant notes are planned for later layers."
+      statusVersion: "v1.0.5",
+      statusTitle: "Live registry online",
+      statusBody: "The public tower now reads from the live tenant registry layer."
     },
     tower: {
       ariaLabel: "Tower map experience",
@@ -103,10 +103,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       floorSelector: "Floor selector",
       floorLabel: "Floor",
       tenantsLabel: "Tenants",
-      emptyState:
-        "No public sample tenants on this floor yet. The full registry arrives in a later construction layer.",
+      emptyState: "No live tenants are assigned to this floor in the current registry snapshot.",
       directoryEyebrow: "Directory",
-      directoryTitle: "Sample tenant registry",
+      directoryTitle: "Live tenant registry",
       close: "Close",
       heatLabel: "Heat",
       floorAbbr: "FL"
@@ -191,9 +190,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       title: "上の階には、誰が住んでる？",
       body:
         "Tower Map は、Solana エコシステムのシグナルを読むための高層マップです。各フロアは、時価総額の重力、文化的な熱量、流動性、編集上の重要度によって整理されています。",
-      statusVersion: "v1.0.3",
-      statusTitle: "日本語レイヤーを建設中",
-      statusBody: "ウォレット、保存、テナントノートは次の建設レイヤーで追加されます。"
+      statusVersion: "v1.0.5",
+      statusTitle: "ライブレジストリ公開中",
+      statusBody: "公開タワーは、現在のテナントレジストリを読み込んでいます。"
     },
     tower: {
       ariaLabel: "Tower Map 体験",
@@ -205,9 +204,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
       floorLabel: "フロア",
       tenantsLabel: "テナント",
       emptyState:
-        "このフロアには、まだ公開サンプルのテナントがいません。完全なレジストリは次の建設レイヤーで追加されます。",
+        "このフロアには、現在のレジストリで割り当てられたテナントがまだいません。",
       directoryEyebrow: "ディレクトリ",
-      directoryTitle: "サンプルテナント一覧",
+      directoryTitle: "ライブテナント一覧",
       close: "閉じる",
       heatLabel: "熱量",
       floorAbbr: "FL"

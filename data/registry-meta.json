@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-05-02T20:43:42.841Z",
+  "sourceUrl": "https://www.towermap.fun/api/tower",
+  "sourceFloors": 23,
+  "tenantRecords": 287,
+  "uniqueTickers": 284,
+  "contractStatusCounts": {
+    "not-applicable": 1,
+    "pending-verification": 286
+  },
+  "categoryCounts": {
+    "Network": 1,
+    "NFT / Consumer": 23,
+    "Infrastructure": 4,
+    "DeFi": 22,
+    "Meme": 207,
+    "AI": 16,
+    "Gaming": 14
+  },
+  "note": "This registry mirrors the current public Tower Map API snapshot used by the app."
+}

@@ -41,16 +41,25 @@ type Tenant = {
   ticker: string
   floor: number
   category: string
+  sourceCategory?: string
   description: string
+  descriptionTokens?: Record<string, string | number> | null
   heat: number
   marketCapTier: MarketCapTier
   poolTier: PoolTier
-  coingeckoId?: string
+  change24h?: number | null
+  direction?: "up" | "down" | "flat" | null
+  coingeckoId?: string | null
   contractAddress?: string | null
   contractStatus: "verified" | "pending-verification" | "not-applicable"
+  sourceFloorName?: string
+  sourceUrl?: string
   sources: string[]
 }
 ```
+
+The production registry lives in `data/tenants.json`. It mirrors the current
+public Tower Map API snapshot instead of generating placeholder residents.
 
 ## Heat
 
@@ -69,13 +78,17 @@ Heat is not the same as market cap.
 ## Market Cap Tier
 
 `marketCapTier` is a readable size band. It avoids false precision in the UI.
+The live registry can use broad source tiers such as `Large`, `Medium`, and
+`Small` alongside curated editorial bands.
 
 ```text
 Mega       >= 1B
 Large      >= 250M
 Mid-Large  >= 75M
+Medium     visible middle tier
 Mid        >= 25M
 Small-Mid  >= 5M
+Small      early or thinly visible tier
 Emerging   >= 1M
 Micro      < 1M
 ```

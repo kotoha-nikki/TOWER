@@ -45,11 +45,11 @@ The interface is designed for English first, with Japanese as an important cultu
 
 ## Repository Status
 
-This repository begins as the foundation layer for Tower Map.
+This repository now contains the public tower experience, bilingual interface layer,
+methodology documents, and the live tenant registry snapshot used by the app.
 
-It currently contains project documentation, methodology notes, contribution rules,
-security policy, environment examples, and public assets. The full application code
-will be added in staged releases as the building rises.
+The building is still being constructed in visible layers. Each release adds another
+piece of the tower rather than hiding the process.
 
 ## Project Structure
 
@@ -69,6 +69,8 @@ will be added in staged releases as the building rises.
 +-- data/
 |   +-- categories.json
 |   +-- floors.json
+|   +-- registry-meta.json
+|   +-- tenants.json
 |   +-- tenants.sample.json
 +-- docs/
 |   +-- architecture.md
@@ -78,6 +80,7 @@ will be added in staged releases as the building rises.
 |   +-- methodology.md
 |   +-- project-overview.md
 |   +-- roadmap.md
+|   +-- tenant-registry.md
 +-- public/
 |   +-- banner.png
 +-- lib/
