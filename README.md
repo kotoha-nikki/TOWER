@@ -1,9 +1,9 @@
 # Tower Map
 
-![Tower Map draft banner](public/banner.png)
+![Tower Map night banner](public/banner.png)
 
-**An editorial high-rise map for tracking signal, culture, liquidity, and market
-gravity across the Solana ecosystem.**
+**An editorial high-rise map for tracking signal, culture, liquidity, and
+market gravity across the Solana ecosystem.**
 
 Tower Map turns ecosystem research into a living building. Every project is a
 tenant. Every floor represents a different mix of visibility, liquidity,
@@ -12,13 +12,13 @@ cultural heat, continuity, and editorial relevance.
 It is not a generic token list or a raw price leaderboard. It is a curated map:
 part directory, part archive, part public attention layer.
 
-まだ建設中。でも、もう人が住みはじめています。
+少しずつ、塔に灯りを入れていく。
 
 ## Current Release
 
 ```text
-version: 1.0.7
-status: public tower + wallet identity + tenant saves
+version: 1.0.8
+status: public tower + wallet identity + saves + tenant notes
 website: https://www.towermap.fun/
 repository: https://github.com/kotoha-nikki/TOWER
 ```
@@ -38,15 +38,18 @@ repository: https://github.com/kotoha-nikki/TOWER
 - Supabase wallet identity layer
 - Public tenant save counts
 - Save / Saved controls for signed-in wallets
+- Tenant Notes for wallet-gated public comments
+- Moderation foundation, rate limit, and soft delete for notes
 
 ## Core Narrative
 
-Tower Map treats the Solana ecosystem as a high-rise.
+Tower Map treats the ecosystem as a high-rise.
 
 - Higher floors carry stronger combined signal.
 - Tenants are projects, tokens, memes, apps, infrastructure, and communities.
 - Floors are editorial tiers, not random rows.
 - Saves turn wallet attention into a public signal.
+- Tenant Notes turn profiles into living rooms of commentary.
 - Japanese is part of the product surface, not just a translation pass.
 
 ## Product Pillars
@@ -63,12 +66,13 @@ financial instruments that do not behave like native ecosystem tenants.
 
 **Public by default**
 
-The tower, methodology, directory, and profiles are browsable without login.
+The tower, methodology, directory, profiles, save counts, and visible tenant
+notes are browsable without login.
 
 **Wallet-native interaction**
 
-Wallet signatures create identity for saves, public counts, and future tenant
-notes. The signed message does not authorize transactions.
+Wallet signatures create identity for saves and tenant notes. The signed
+message does not authorize transactions.
 
 **International surface**
 
@@ -102,13 +106,17 @@ public cultural layer.
 ## API Routes
 
 ```text
-POST /api/auth/nonce      create one-time wallet login challenge
-POST /api/auth/verify     verify signed message and create session
-GET  /api/auth/session    read current wallet session
-POST /api/auth/logout     clear session
+POST   /api/auth/nonce      create one-time wallet login challenge
+POST   /api/auth/verify     verify signed message and create session
+GET    /api/auth/session    read current wallet session
+POST   /api/auth/logout     clear session
 
-GET  /api/favorites       read public save counts and wallet saved slugs
-POST /api/favorites       save or unsave a tenant
+GET    /api/favorites       read public save counts and wallet saved slugs
+POST   /api/favorites       save or unsave a tenant
+
+GET    /api/notes           read visible tenant notes
+POST   /api/notes           create a wallet-gated tenant note
+DELETE /api/notes           soft-delete a note owned by the current wallet
 ```
 
 ## Data Layers
@@ -131,6 +139,7 @@ Run these SQL files in Supabase:
 ```text
 supabase/wallet-identity.sql
 supabase/tenant-saves.sql
+supabase/tenant-notes.sql
 ```
 
 They create:
@@ -140,6 +149,8 @@ wallet_users
 wallet_login_nonces
 tenant_saves
 tenant_save_counts
+tenant_notes
+public_tenant_notes
 ```
 
 The browser never receives the Supabase service role key. Mutations go through
@@ -190,6 +201,7 @@ npm audit --omit=dev
 +-- app/
 |   +-- api/auth/
 |   +-- api/favorites/
+|   +-- api/notes/
 |   +-- en/
 |   +-- ja/
 |   +-- methodology/
@@ -202,6 +214,7 @@ npm audit --omit=dev
 |   +-- localized-methodology-page.tsx
 |   +-- localized-profile-page.tsx
 |   +-- site-header.tsx
+|   +-- tenant-notes.tsx
 |   +-- tenant-save-control.tsx
 |   +-- tower-experience.tsx
 |   +-- wallet-identity.tsx
@@ -218,6 +231,7 @@ npm audit --omit=dev
 |   +-- methodology.md
 |   +-- project-overview.md
 |   +-- roadmap.md
+|   +-- tenant-notes.md
 |   +-- tenant-registry.md
 |   +-- tenant-saves.md
 |   +-- wallet-identity.md
@@ -228,6 +242,7 @@ npm audit --omit=dev
 +-- public/
 |   +-- banner.png
 +-- supabase/
+|   +-- tenant-notes.sql
 |   +-- tenant-saves.sql
 |   +-- wallet-identity.sql
 ```
@@ -237,7 +252,8 @@ npm audit --omit=dev
 This repository is built in visible layers, like a tower under construction.
 
 The foundation is no longer empty: the public map, registry, language layer,
-wallet identity, and save system are already in place. Future layers will add
-tenant notes, moderation fields, operations tooling, and richer data maintenance.
+wallet identity, save system, and tenant notes layer are already in place.
+Future layers can add richer moderation tooling, operations dashboards, data
+maintenance workflows, and more editorial surfaces.
 
 この塔は、少しずつ上に伸びていきます。

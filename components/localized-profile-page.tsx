@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { TenantNotes } from "@/components/tenant-notes";
 import { TenantSaveControl } from "@/components/tenant-save-control";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { getFloorByNumber, getTenantBySlug } from "@/lib/tower-data";
@@ -84,6 +85,8 @@ export function LocalizedTenantProfilePage({
           <p>{dictionary.profile.interactionBody}</p>
         </article>
       </section>
+
+      <TenantNotes tenantSlug={tenant.slug} locale={locale} />
     </main>
   );
 }
