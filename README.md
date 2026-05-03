@@ -17,8 +17,8 @@ part directory, part archive, part public attention layer.
 ## Current Release
 
 ```text
-version: 1.0.8
-status: public tower + wallet identity + saves + tenant notes
+version: 1.0.9
+status: public tower + wallet identity + saves + tenant notes + operations QA
 website: https://www.towermap.fun/
 repository: https://github.com/kotoha-nikki/TOWER
 ```
@@ -40,6 +40,10 @@ repository: https://github.com/kotoha-nikki/TOWER
 - Save / Saved controls for signed-in wallets
 - Tenant Notes for wallet-gated public comments
 - Moderation foundation, rate limit, and soft delete for notes
+- Data validation scripts
+- Node test suite
+- Release consistency checks
+- Deployment, maintenance, changelog, issue, and PR workflows
 
 ## Core Narrative
 

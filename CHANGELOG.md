@@ -2,6 +2,18 @@
 
 All notable repository changes are documented here.
 
+## 1.0.9
+
+- Added data integrity tests.
+- Added route and Supabase schema presence tests.
+- Added data validation script.
+- Added release consistency check script.
+- Added `npm run qa`.
+- Added deployment and maintenance guides.
+- Added release notes document.
+- Added GitHub issue templates and PR template.
+- Updated README operations and QA workflow documentation.
+
 ## 1.0.8
 
 - Added Tenant Notes API.
