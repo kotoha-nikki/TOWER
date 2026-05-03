@@ -58,10 +58,11 @@ Tower Map will be built in visible stages, like a tower under construction.
 
 ## Stage 7: Saved Tenants
 
-- save and unsave tenants
+- Save / Saved tenant controls
 - public save counts
-- personal saved list
-- Supabase persistence
+- Supabase `tenant_saves` table
+- `/api/favorites` read and write route
+- profile and directory save count display
 
 ## Stage 8: Tenant Notes
 

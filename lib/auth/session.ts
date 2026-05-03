@@ -76,6 +76,16 @@ export function readSessionToken(token: string | undefined): WalletSession | nul
   return payload;
 }
 
+export function readSessionFromCookieHeader(cookieHeader: string | null) {
+  const token = (cookieHeader ?? "")
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${SESSION_COOKIE_NAME}=`))
+    ?.slice(SESSION_COOKIE_NAME.length + 1);
+
+  return readSessionToken(token ? decodeURIComponent(token) : undefined);
+}
+
 export function getSessionTtlSeconds() {
   const configured = Number(process.env.AUTH_SESSION_TTL_SECONDS ?? 60 * 60 * 24 * 7);
   return Number.isFinite(configured) && configured > 0 ? configured : 60 * 60 * 24 * 7;

@@ -57,6 +57,7 @@ piece of the tower rather than hiding the process.
 .
 +-- app/
 |   +-- api/auth/
+|   +-- api/favorites/
 |   +-- en/
 |   +-- ja/
 |   +-- methodology/
@@ -66,6 +67,7 @@ piece of the tower rather than hiding the process.
 |   +-- page.tsx
 +-- components/
 |   +-- site-header.tsx
+|   +-- tenant-save-control.tsx
 |   +-- tower-experience.tsx
 |   +-- wallet-identity.tsx
 +-- data/
@@ -83,6 +85,7 @@ piece of the tower rather than hiding the process.
 |   +-- project-overview.md
 |   +-- roadmap.md
 |   +-- tenant-registry.md
+|   +-- tenant-saves.md
 |   +-- wallet-identity.md
 +-- public/
 |   +-- banner.png
@@ -91,6 +94,7 @@ piece of the tower rather than hiding the process.
 |   +-- i18n.ts
 |   +-- tower-data.ts
 +-- supabase/
+|   +-- tenant-saves.sql
 |   +-- wallet-identity.sql
 +-- .env.example
 +-- .gitignore

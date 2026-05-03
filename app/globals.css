@@ -459,6 +459,11 @@ button {
   text-transform: uppercase;
 }
 
+.tenant-card-frame {
+  display: grid;
+  gap: 8px;
+}
+
 .tenant-card {
   display: grid;
   gap: 8px;
@@ -544,6 +549,55 @@ button {
 
 .compact-card {
   padding: 12px;
+}
+
+.tenant-save {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tenant-save button {
+  border: 1px solid var(--line-strong);
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+  padding: 7px 10px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tenant-save button:hover {
+  background: var(--red);
+}
+
+.tenant-save button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.tenant-save span {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.tenant-save small {
+  flex-basis: 100%;
+  color: var(--red);
+  font-size: 12px;
+}
+
+.compact-save button,
+.compact-save span {
+  padding: 5px 7px;
+  font-size: 10px;
 }
 
 .page-shell {
@@ -652,6 +706,10 @@ button {
   color: var(--red);
   padding: 8px 12px;
   font-family: "Courier New", monospace;
+}
+
+.profile-hero .tenant-save {
+  margin: 18px 0 12px;
 }
 
 .profile-hero p:not(.eyebrow) {

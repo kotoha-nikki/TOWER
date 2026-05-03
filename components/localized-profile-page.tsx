@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { TenantSaveControl } from "@/components/tenant-save-control";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { getFloorByNumber, getTenantBySlug } from "@/lib/tower-data";
 
@@ -42,6 +43,7 @@ export function LocalizedTenantProfilePage({
           <h1>{tenant.name}</h1>
           <span>{tenant.ticker}</span>
         </div>
+        <TenantSaveControl tenantSlug={tenant.slug} locale={locale} />
         <p>{tenant.description}</p>
         {locale === "ja" ? <p className="fallback-note">{dictionary.fallback.note}</p> : null}
       </section>

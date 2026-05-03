@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { TenantSaveControl } from "@/components/tenant-save-control";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import type { Floor, Tenant } from "@/lib/tower-data";
 
@@ -21,12 +22,57 @@ export function TowerExperience({
   const dictionary = getDictionary(locale);
   const [selectedFloor, setSelectedFloor] = useState(23);
   const [directoryOpen, setDirectoryOpen] = useState(false);
+  const [favoriteCounts, setFavoriteCounts] = useState<Record<string, number>>({});
+  const [savedSlugs, setSavedSlugs] = useState<Set<string>>(new Set());
 
   const activeFloor = floors.find((floor) => floor.floorNumber === selectedFloor) ?? floors[0];
   const tenantsOnFloor = useMemo(
     () => tenants.filter((tenant) => tenant.floor === selectedFloor),
     [selectedFloor, tenants]
   );
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/favorites")
+      .then((response) => response.json())
+      .then((payload: { counts?: Record<string, number>; savedSlugs?: string[] }) => {
+        if (!active) {
+          return;
+        }
+
+        setFavoriteCounts(payload.counts ?? {});
+        setSavedSlugs(new Set(payload.savedSlugs ?? []));
+      })
+      .catch(() => {
+        if (active) {
+          setFavoriteCounts({});
+          setSavedSlugs(new Set());
+        }
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  function handleSaveChange(tenantSlug: string, saved: boolean, count: number) {
+    setFavoriteCounts((current) => ({
+      ...current,
+      [tenantSlug]: count
+    }));
+    setSavedSlugs((current) => {
+      const next = new Set(current);
+
+      if (saved) {
+        next.add(tenantSlug);
+      } else {
+        next.delete(tenantSlug);
+      }
+
+      return next;
+    });
+  }
 
   return (
     <section className="tower-shell" aria-label={dictionary.tower.ariaLabel}>
@@ -84,6 +130,9 @@ export function TowerExperience({
                   tenant={tenant}
                   locale={locale}
                   routePrefix={routePrefix}
+                  saveCount={favoriteCounts[tenant.slug] ?? 0}
+                  saved={savedSlugs.has(tenant.slug)}
+                  onSaveChange={handleSaveChange}
                 />
               ))
             ) : (
@@ -116,6 +165,9 @@ export function TowerExperience({
                   tenant={tenant}
                   locale={locale}
                   routePrefix={routePrefix}
+                  saveCount={favoriteCounts[tenant.slug] ?? 0}
+                  saved={savedSlugs.has(tenant.slug)}
+                  onSaveChange={handleSaveChange}
                   compact
                 />
               ))}
@@ -131,11 +183,17 @@ function TenantCard({
   tenant,
   locale,
   routePrefix = "",
+  saveCount,
+  saved,
+  onSaveChange,
   compact = false
 }: {
   tenant: Tenant;
   locale: Locale;
   routePrefix?: "" | "/en" | "/ja";
+  saveCount: number;
+  saved: boolean;
+  onSaveChange: (tenantSlug: string, saved: boolean, count: number) => void;
   compact?: boolean;
 }) {
   const dictionary = getDictionary(locale);
@@ -143,21 +201,31 @@ function TenantCard({
   const profileHref = `${routePrefix}/profile/${tenant.slug}`;
 
   return (
-    <Link className={compact ? "tenant-card compact-card" : "tenant-card"} href={profileHref}>
-      <div>
-        <strong>{tenant.name}</strong>
-        <span>{tenant.ticker}</span>
-      </div>
-      <p>{tenant.description}</p>
-      <footer>
-        <span>{categoryLabel}</span>
-        <span>
-          {dictionary.tower.heatLabel} {tenant.heat}
-        </span>
-        <span>
-          {dictionary.tower.floorAbbr} {tenant.floor}
-        </span>
-      </footer>
-    </Link>
+    <article className="tenant-card-frame">
+      <Link className={compact ? "tenant-card compact-card" : "tenant-card"} href={profileHref}>
+        <div>
+          <strong>{tenant.name}</strong>
+          <span>{tenant.ticker}</span>
+        </div>
+        <p>{tenant.description}</p>
+        <footer>
+          <span>{categoryLabel}</span>
+          <span>
+            {dictionary.tower.heatLabel} {tenant.heat}
+          </span>
+          <span>
+            {dictionary.tower.floorAbbr} {tenant.floor}
+          </span>
+        </footer>
+      </Link>
+      <TenantSaveControl
+        tenantSlug={tenant.slug}
+        locale={locale}
+        initialCount={saveCount}
+        initialSaved={saved}
+        compact={compact}
+        onChange={onSaveChange}
+      />
+    </article>
   );
 }

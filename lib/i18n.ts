@@ -28,6 +28,14 @@ type Dictionary = {
     close: string;
     sessionReady: string;
   };
+  saves: {
+    save: string;
+    saved: string;
+    saving: string;
+    countLabel: string;
+    connectToSave: string;
+    unavailable: string;
+  };
   home: {
     eyebrow: string;
     title: string;
@@ -111,14 +119,22 @@ export const dictionaries: Record<Locale, Dictionary> = {
       close: "Close",
       sessionReady: "Wallet identity is active."
     },
+    saves: {
+      save: "Save",
+      saved: "Saved",
+      saving: "Saving...",
+      countLabel: "Saves",
+      connectToSave: "Connect wallet to save",
+      unavailable: "Save state unavailable"
+    },
     home: {
       eyebrow: "Public tower / English layer",
       title: "Who lives upstairs?",
       body:
         "Tower Map is a living high-rise map of Solana ecosystem signal. Every floor groups tenants by market gravity, cultural heat, liquidity visibility, and editorial relevance.",
-      statusVersion: "v1.0.6",
-      statusTitle: "Wallet identity online",
-      statusBody: "Wallet login now supports signed identity for later saves and tenant notes."
+      statusVersion: "v1.0.7",
+      statusTitle: "Tenant saves online",
+      statusBody: "Wallet identity now powers saved tenants and public save counts."
     },
     tower: {
       ariaLabel: "Tower map experience",
@@ -224,14 +240,22 @@ export const dictionaries: Record<Locale, Dictionary> = {
       close: "閉じる",
       sessionReady: "ウォレット認証が有効です。"
     },
+    saves: {
+      save: "保存",
+      saved: "保存済み",
+      saving: "保存中...",
+      countLabel: "保存数",
+      connectToSave: "ウォレット接続で保存",
+      unavailable: "保存状態を取得できません"
+    },
     home: {
       eyebrow: "公開タワー / 日本語レイヤー",
       title: "上の階には、誰が住んでる？",
       body:
         "Tower Map は、Solana エコシステムのシグナルを読むための高層マップです。各フロアは、時価総額の重力、文化的な熱量、流動性、編集上の重要度によって整理されています。",
-      statusVersion: "v1.0.6",
-      statusTitle: "ウォレット認証レイヤー公開中",
-      statusBody: "署名ログインにより、保存機能とテナントノートの土台が入りました。"
+      statusVersion: "v1.0.7",
+      statusTitle: "テナント保存レイヤー公開中",
+      statusBody: "ウォレット認証から、保存済みテナントと公開保存数が動きはじめました。"
     },
     tower: {
       ariaLabel: "Tower Map 体験",
