@@ -1,0 +1,48 @@
+# Changelog
+
+All notable repository changes are documented here.
+
+## 1.0.8
+
+- Added Tenant Notes API.
+- Added wallet-gated note posting.
+- Added public note reading.
+- Added moderation foundation and soft delete.
+- Added Supabase `tenant_notes` schema.
+- Updated README banner and current product state.
+
+## 1.0.7
+
+- Added tenant saves.
+- Added public save counts.
+- Added Supabase `tenant_saves` schema.
+- Refreshed README for current product layer.
+
+## 1.0.6
+
+- Added wallet identity.
+- Added signed-message login.
+- Added Supabase wallet user and nonce schema.
+
+## 1.0.5
+
+- Expanded live tenant registry.
+- Added registry metadata and verification fields.
+
+## 1.0.4
+
+- Added Japanese language layer.
+- Added i18n routing and fallback behavior.
+
+## 1.0.3
+
+- Built the public tower experience.
+- Added homepage, methodology, tower map, directory, and tenant profile pages.
+
+## 1.0.2
+
+- Added tower blueprint and data model.
+
+## 1.0.1
+
+- Initialized the Tower Map foundation.

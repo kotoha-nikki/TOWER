@@ -188,6 +188,18 @@ Production build:
 npm run build
 ```
 
+Full QA pass:
+
+```bash
+npm run qa
+```
+
+Data validation only:
+
+```bash
+npm run validate:data
+```
+
 Security check:
 
 ```bash
@@ -223,14 +235,23 @@ npm audit --omit=dev
 |   +-- floors.json
 |   +-- registry-meta.json
 |   +-- tenants.json
++-- scripts/
+|   +-- check-release.mjs
+|   +-- validate-data.mjs
++-- tests/
+|   +-- data-integrity.test.mjs
+|   +-- routes.test.mjs
 +-- docs/
 |   +-- architecture.md
+|   +-- deployment.md
 |   +-- data-model.md
 |   +-- design-system.md
 |   +-- i18n.md
+|   +-- maintenance.md
 |   +-- methodology.md
 |   +-- project-overview.md
 |   +-- roadmap.md
+|   +-- release-notes.md
 |   +-- tenant-notes.md
 |   +-- tenant-registry.md
 |   +-- tenant-saves.md
@@ -245,6 +266,10 @@ npm audit --omit=dev
 |   +-- tenant-notes.sql
 |   +-- tenant-saves.sql
 |   +-- wallet-identity.sql
++-- .github/
+|   +-- ISSUE_TEMPLATE/
+|   +-- PULL_REQUEST_TEMPLATE.md
++-- CHANGELOG.md
 ```
 
 ## Builder Notes
@@ -253,7 +278,9 @@ This repository is built in visible layers, like a tower under construction.
 
 The foundation is no longer empty: the public map, registry, language layer,
 wallet identity, save system, and tenant notes layer are already in place.
-Future layers can add richer moderation tooling, operations dashboards, data
-maintenance workflows, and more editorial surfaces.
+The operations layer now adds repeatable QA, deployment notes, issue templates,
+release notes, and maintenance workflows. Future layers can add richer
+moderation tooling, operations dashboards, data maintenance workflows, and more
+editorial surfaces.
 
 この塔は、少しずつ上に伸びていきます。

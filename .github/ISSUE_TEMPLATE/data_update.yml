@@ -1,0 +1,35 @@
+name: Tenant data update
+description: Request a tenant, floor, CA, or metadata update.
+title: "[Data]: "
+labels: ["data"]
+body:
+  - type: input
+    id: tenant
+    attributes:
+      label: Tenant
+      placeholder: Tenant name or slug
+    validations:
+      required: true
+  - type: dropdown
+    id: update_type
+    attributes:
+      label: Update type
+      options:
+        - Contract address verification
+        - Floor placement review
+        - Category update
+        - Metadata correction
+        - New tenant review
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add official links, registry links, or clear context.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
