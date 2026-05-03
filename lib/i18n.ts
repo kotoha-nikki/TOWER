@@ -15,6 +15,19 @@ type Dictionary = {
     methodology: string;
     github: string;
   };
+  auth: {
+    connect: string;
+    chooseWallet: string;
+    signMessage: string;
+    signing: string;
+    signedIn: string;
+    disconnect: string;
+    connectedWallet: string;
+    installWallet: string;
+    unavailable: string;
+    close: string;
+    sessionReady: string;
+  };
   home: {
     eyebrow: string;
     title: string;
@@ -85,14 +98,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
       methodology: "Methodology",
       github: "GitHub"
     },
+    auth: {
+      connect: "Connect wallet",
+      chooseWallet: "Choose wallet",
+      signMessage: "Sign message",
+      signing: "Signing...",
+      signedIn: "Signed in",
+      disconnect: "Disconnect",
+      connectedWallet: "Connected wallet",
+      installWallet: "Install wallet",
+      unavailable: "Wallet extension not found.",
+      close: "Close",
+      sessionReady: "Wallet identity is active."
+    },
     home: {
       eyebrow: "Public tower / English layer",
       title: "Who lives upstairs?",
       body:
         "Tower Map is a living high-rise map of Solana ecosystem signal. Every floor groups tenants by market gravity, cultural heat, liquidity visibility, and editorial relevance.",
-      statusVersion: "v1.0.5",
-      statusTitle: "Live registry online",
-      statusBody: "The public tower now reads from the live tenant registry layer."
+      statusVersion: "v1.0.6",
+      statusTitle: "Wallet identity online",
+      statusBody: "Wallet login now supports signed identity for later saves and tenant notes."
     },
     tower: {
       ariaLabel: "Tower map experience",
@@ -185,14 +211,27 @@ export const dictionaries: Record<Locale, Dictionary> = {
       methodology: "選定基準",
       github: "GitHub"
     },
+    auth: {
+      connect: "ウォレット接続",
+      chooseWallet: "ウォレットを選択",
+      signMessage: "メッセージ署名",
+      signing: "署名中...",
+      signedIn: "ログイン済み",
+      disconnect: "切断",
+      connectedWallet: "接続中のウォレット",
+      installWallet: "ウォレットをインストール",
+      unavailable: "ウォレット拡張機能が見つかりません。",
+      close: "閉じる",
+      sessionReady: "ウォレット認証が有効です。"
+    },
     home: {
       eyebrow: "公開タワー / 日本語レイヤー",
       title: "上の階には、誰が住んでる？",
       body:
         "Tower Map は、Solana エコシステムのシグナルを読むための高層マップです。各フロアは、時価総額の重力、文化的な熱量、流動性、編集上の重要度によって整理されています。",
-      statusVersion: "v1.0.5",
-      statusTitle: "ライブレジストリ公開中",
-      statusBody: "公開タワーは、現在のテナントレジストリを読み込んでいます。"
+      statusVersion: "v1.0.6",
+      statusTitle: "ウォレット認証レイヤー公開中",
+      statusBody: "署名ログインにより、保存機能とテナントノートの土台が入りました。"
     },
     tower: {
       ariaLabel: "Tower Map 体験",

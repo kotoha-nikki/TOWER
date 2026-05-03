@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getDictionary, getPathLocale, withLocale } from "@/lib/i18n";
+import { WalletIdentity } from "@/components/wallet-identity";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -30,13 +31,16 @@ export function SiteHeader() {
           {dictionary.nav.github}
         </a>
       </nav>
-      <div className="language-switcher" aria-label="Language switcher">
-        <Link className={locale === "en" ? "active-locale" : ""} href={withLocale(pathname, "en")}>
-          EN
-        </Link>
-        <Link className={locale === "ja" ? "active-locale" : ""} href={withLocale(pathname, "ja")}>
-          JP
-        </Link>
+      <div className="header-actions">
+        <WalletIdentity locale={locale} />
+        <div className="language-switcher" aria-label="Language switcher">
+          <Link className={locale === "en" ? "active-locale" : ""} href={withLocale(pathname, "en")}>
+            EN
+          </Link>
+          <Link className={locale === "ja" ? "active-locale" : ""} href={withLocale(pathname, "ja")}>
+            JP
+          </Link>
+        </div>
       </div>
     </header>
   );

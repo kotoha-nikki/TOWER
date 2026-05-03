@@ -56,6 +56,7 @@ piece of the tower rather than hiding the process.
 ```text
 .
 +-- app/
+|   +-- api/auth/
 |   +-- en/
 |   +-- ja/
 |   +-- methodology/
@@ -66,6 +67,7 @@ piece of the tower rather than hiding the process.
 +-- components/
 |   +-- site-header.tsx
 |   +-- tower-experience.tsx
+|   +-- wallet-identity.tsx
 +-- data/
 |   +-- categories.json
 |   +-- floors.json
@@ -81,11 +83,15 @@ piece of the tower rather than hiding the process.
 |   +-- project-overview.md
 |   +-- roadmap.md
 |   +-- tenant-registry.md
+|   +-- wallet-identity.md
 +-- public/
 |   +-- banner.png
 +-- lib/
+|   +-- auth/
 |   +-- i18n.ts
 |   +-- tower-data.ts
++-- supabase/
+|   +-- wallet-identity.sql
 +-- .env.example
 +-- .gitignore
 +-- CONTRIBUTING.md

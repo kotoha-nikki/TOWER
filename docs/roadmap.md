@@ -49,10 +49,11 @@ Tower Map will be built in visible stages, like a tower under construction.
 
 ## Stage 6: Wallet Identity
 
-- Solana wallet connect
-- message signing
+- Phantom, Solflare, and Backpack connect
+- message signing login
+- Supabase wallet users
 - nonce verification
-- authenticated session
+- HttpOnly authenticated session
 - public browsing remains open
 
 ## Stage 7: Saved Tenants
