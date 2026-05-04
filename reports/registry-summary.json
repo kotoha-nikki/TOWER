@@ -1,0 +1,309 @@
+{
+  "generatedAt": "2026-05-04T15:01:30.641Z",
+  "registry": {
+    "tenantCount": 287,
+    "floorCount": 23,
+    "categoryCount": 9,
+    "averageTenantsPerFloor": 12.48,
+    "overcrowdedThreshold": 20
+  },
+  "floorOccupancy": [
+    {
+      "floorNumber": 23,
+      "slug": "penthouse",
+      "label": "Penthouse",
+      "tier": "penthouse",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 22,
+      "slug": "cornerstones",
+      "label": "Cornerstones",
+      "tier": "upper",
+      "tenantCount": 3
+    },
+    {
+      "floorNumber": 21,
+      "slug": "liquidity-suite",
+      "label": "Liquidity Suite",
+      "tier": "upper",
+      "tenantCount": 6
+    },
+    {
+      "floorNumber": 20,
+      "slug": "casino-floor",
+      "label": "Casino Floor",
+      "tier": "upper",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 19,
+      "slug": "major-names",
+      "label": "Major Names",
+      "tier": "upper",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 18,
+      "slug": "meme-suite",
+      "label": "Meme Suite",
+      "tier": "upper",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 17,
+      "slug": "ai-floor",
+      "label": "AI Floor",
+      "tier": "upper",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 16,
+      "slug": "compute-wing",
+      "label": "Yield + Compute Wing",
+      "tier": "upper",
+      "tenantCount": 5
+    },
+    {
+      "floorNumber": 15,
+      "slug": "protocol-row",
+      "label": "Protocol Row",
+      "tier": "mid",
+      "tenantCount": 4
+    },
+    {
+      "floorNumber": 14,
+      "slug": "culture-row",
+      "label": "Culture Row",
+      "tier": "mid",
+      "tenantCount": 3
+    },
+    {
+      "floorNumber": 13,
+      "slug": "agent-labs",
+      "label": "Agent Labs",
+      "tier": "mid",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 12,
+      "slug": "consumer-deck",
+      "label": "Consumer Deck",
+      "tier": "mid",
+      "tenantCount": 13
+    },
+    {
+      "floorNumber": 11,
+      "slug": "game-rooms",
+      "label": "Game Rooms",
+      "tier": "mid",
+      "tenantCount": 1
+    },
+    {
+      "floorNumber": 10,
+      "slug": "active-midcap",
+      "label": "Active Midcap",
+      "tier": "mid",
+      "tenantCount": 13
+    },
+    {
+      "floorNumber": 9,
+      "slug": "workshops",
+      "label": "Workshops",
+      "tier": "mid",
+      "tenantCount": 23
+    },
+    {
+      "floorNumber": 8,
+      "slug": "street-signal",
+      "label": "Street Signal",
+      "tier": "lower",
+      "tenantCount": 20
+    },
+    {
+      "floorNumber": 7,
+      "slug": "early-agents",
+      "label": "Early Agents",
+      "tier": "lower",
+      "tenantCount": 11
+    },
+    {
+      "floorNumber": 6,
+      "slug": "watchlist-floor",
+      "label": "Watchlist Floor",
+      "tier": "lower",
+      "tenantCount": 31
+    },
+    {
+      "floorNumber": 5,
+      "slug": "small-studios",
+      "label": "Small Studios",
+      "tier": "lower",
+      "tenantCount": 13
+    },
+    {
+      "floorNumber": 4,
+      "slug": "micro-culture",
+      "label": "Micro Culture",
+      "tier": "lower",
+      "tenantCount": 67
+    },
+    {
+      "floorNumber": 3,
+      "slug": "new-checkins",
+      "label": "New Check-ins",
+      "tier": "lower",
+      "tenantCount": 40
+    },
+    {
+      "floorNumber": 2,
+      "slug": "basement-labs",
+      "label": "Basement Labs",
+      "tier": "lobby",
+      "tenantCount": 14
+    },
+    {
+      "floorNumber": 1,
+      "slug": "lobby",
+      "label": "Lobby",
+      "tier": "lobby",
+      "tenantCount": 14
+    }
+  ],
+  "categoryCoverage": [
+    {
+      "id": "network",
+      "label": "Network",
+      "tenantCount": 1,
+      "defaultFloorRange": [
+        21,
+        23
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure",
+      "tenantCount": 4,
+      "defaultFloorRange": [
+        13,
+        22
+      ]
+    },
+    {
+      "id": "defi",
+      "label": "DeFi",
+      "tenantCount": 22,
+      "defaultFloorRange": [
+        10,
+        21
+      ]
+    },
+    {
+      "id": "meme",
+      "label": "Meme",
+      "tenantCount": 207,
+      "defaultFloorRange": [
+        3,
+        20
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "tenantCount": 16,
+      "defaultFloorRange": [
+        7,
+        18
+      ]
+    },
+    {
+      "id": "depin",
+      "label": "DePIN",
+      "tenantCount": 0,
+      "defaultFloorRange": [
+        8,
+        18
+      ]
+    },
+    {
+      "id": "nft-consumer",
+      "label": "NFT / Consumer",
+      "tenantCount": 23,
+      "defaultFloorRange": [
+        5,
+        16
+      ]
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "tenantCount": 14,
+      "defaultFloorRange": [
+        4,
+        14
+      ]
+    },
+    {
+      "id": "culture-apps",
+      "label": "Culture / Apps",
+      "tenantCount": 0,
+      "defaultFloorRange": [
+        1,
+        15
+      ]
+    }
+  ],
+  "contractStatus": {
+    "not-applicable": 1,
+    "pending-verification": 286
+  },
+  "duplicateTickers": [
+    {
+      "value": "ORCA",
+      "count": 2
+    },
+    {
+      "value": "PYTH",
+      "count": 2
+    },
+    {
+      "value": "TRUMP",
+      "count": 2
+    }
+  ],
+  "emptyFloors": [],
+  "overcrowdedFloors": [
+    {
+      "floorNumber": 4,
+      "label": "Micro Culture",
+      "tenantCount": 67
+    },
+    {
+      "floorNumber": 3,
+      "label": "New Check-ins",
+      "tenantCount": 40
+    },
+    {
+      "floorNumber": 6,
+      "label": "Watchlist Floor",
+      "tenantCount": 31
+    },
+    {
+      "floorNumber": 9,
+      "label": "Workshops",
+      "tenantCount": 23
+    },
+    {
+      "floorNumber": 8,
+      "label": "Street Signal",
+      "tenantCount": 20
+    }
+  ],
+  "reviewFlags": {
+    "hasEmptyFloors": false,
+    "hasOvercrowdedFloors": true,
+    "hasDuplicateTickers": true,
+    "pendingContractCount": 286,
+    "verifiedContractCount": 0
+  }
+}

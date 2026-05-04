@@ -17,8 +17,8 @@ part directory, part archive, part public attention layer.
 ## Current Release
 
 ```text
-version: 1.0.9
-status: public tower + wallet identity + saves + tenant notes + operations QA
+version: 1.1.1
+status: public tower + wallet identity + saves + tenant notes + registry operations
 website: https://www.towermap.fun/
 repository: https://github.com/kotoha-nikki/TOWER
 ```
@@ -41,6 +41,7 @@ repository: https://github.com/kotoha-nikki/TOWER
 - Tenant Notes for wallet-gated public comments
 - Moderation foundation, rate limit, and soft delete for notes
 - Data validation scripts
+- Registry operations report
 - Node test suite
 - Release consistency checks
 - Deployment, maintenance, changelog, issue, and PR workflows
@@ -54,6 +55,7 @@ Tower Map treats the ecosystem as a high-rise.
 - Floors are editorial tiers, not random rows.
 - Saves turn wallet attention into a public signal.
 - Tenant Notes turn profiles into living rooms of commentary.
+- Registry operations keep the building inspectable as it grows.
 - Japanese is part of the product surface, not just a translation pass.
 
 ## Product Pillars
@@ -77,6 +79,12 @@ notes are browsable without login.
 
 Wallet signatures create identity for saves and tenant notes. The signed
 message does not authorize transactions.
+
+**Operations-minded registry**
+
+Tenant data is checked by scripts, tests, and generated reports before release.
+The registry has floor occupancy, category coverage, CA status, duplicate
+ticker, and review flag visibility.
 
 **International surface**
 
@@ -135,6 +143,31 @@ data/registry-meta.json   registry metadata
 The tenant registry mirrors the public Tower Map API snapshot and keeps
 verification fields separate from display fields. Contract addresses are not
 invented.
+
+## Registry Operations
+
+The registry is not maintained as a random list. Tower Map includes an
+operations report for inspecting tenant data before releases.
+
+```bash
+npm run registry:report
+```
+
+The report writes:
+
+```text
+reports/registry-summary.json
+```
+
+It tracks:
+
+- Floor occupancy
+- Category coverage
+- CA verification status
+- Empty floors
+- Overcrowded floors
+- Duplicate tickers
+- Maintenance review flags
 
 ## Supabase Tables
 
@@ -204,6 +237,12 @@ Data validation only:
 npm run validate:data
 ```
 
+Registry operations report:
+
+```bash
+npm run registry:report
+```
+
 Security check:
 
 ```bash
@@ -241,21 +280,23 @@ npm audit --omit=dev
 |   +-- tenants.json
 +-- scripts/
 |   +-- check-release.mjs
+|   +-- registry-report.mjs
 |   +-- validate-data.mjs
 +-- tests/
 |   +-- data-integrity.test.mjs
 |   +-- routes.test.mjs
 +-- docs/
 |   +-- architecture.md
-|   +-- deployment.md
 |   +-- data-model.md
+|   +-- deployment.md
 |   +-- design-system.md
 |   +-- i18n.md
 |   +-- maintenance.md
 |   +-- methodology.md
 |   +-- project-overview.md
-|   +-- roadmap.md
+|   +-- registry-operations.md
 |   +-- release-notes.md
+|   +-- roadmap.md
 |   +-- tenant-notes.md
 |   +-- tenant-registry.md
 |   +-- tenant-saves.md
@@ -266,6 +307,8 @@ npm audit --omit=dev
 |   +-- tower-data.ts
 +-- public/
 |   +-- banner.png
++-- reports/
+|   +-- registry-summary.json
 +-- supabase/
 |   +-- tenant-notes.sql
 |   +-- tenant-saves.sql
@@ -281,10 +324,9 @@ npm audit --omit=dev
 This repository is built in visible layers, like a tower under construction.
 
 The foundation is no longer empty: the public map, registry, language layer,
-wallet identity, save system, and tenant notes layer are already in place.
-The operations layer now adds repeatable QA, deployment notes, issue templates,
-release notes, and maintenance workflows. Future layers can add richer
-moderation tooling, operations dashboards, data maintenance workflows, and more
-editorial surfaces.
+wallet identity, save system, tenant notes layer, QA workflow, and registry
+operations layer are already in place. Future layers can add richer moderation
+tooling, operations dashboards, data maintenance workflows, and more editorial
+surfaces.
 
 この塔は、少しずつ上に伸びていきます。

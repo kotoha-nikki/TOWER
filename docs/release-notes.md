@@ -1,5 +1,19 @@
 # Release Notes
 
+## v1.1.1 - Registry Operations
+
+Tower Map added the first registry operations layer.
+
+Highlights:
+
+- Registry report script
+- Floor occupancy summary
+- Category coverage summary
+- Contract verification status counts
+- Duplicate ticker inspection
+- Empty and overcrowded floor review flags
+- Generated `reports/registry-summary.json`
+
 ## v1.0.8 - Tenant Notes
 
 Tower Map added public tenant notes with wallet-gated posting.

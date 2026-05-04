@@ -2,6 +2,15 @@
 
 All notable repository changes are documented here.
 
+## 1.1.1
+
+- Added registry operations report script.
+- Added `npm run registry:report`.
+- Added generated registry summary JSON.
+- Added registry operations documentation.
+- Added floor occupancy, category coverage, CA status, duplicate ticker, empty floor, and overcrowded floor inspection output.
+- Updated README for registry operations.
+
 ## 1.0.9
 
 - Added data integrity tests.
