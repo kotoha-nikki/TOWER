@@ -73,6 +73,17 @@ This keeps moderation operationally simple:
 - `hidden` notes can be removed from the public surface by an operator.
 - `deleted` notes were removed by the author or by moderation workflow.
 
+The full moderation workflow lives in:
+
+```text
+docs/moderation.md
+docs/community-guidelines.md
+```
+
+The reserved `moderation_actions` table records note review, hidden notes,
+deleted notes, wallet bans, and wallet unbans before Tower Map has a dedicated
+admin console.
+
 ## Rate Limit
 
 The API currently limits each wallet user to 3 notes per 60 seconds. This is a
@@ -91,6 +102,7 @@ The migration creates:
 
 ```text
 tenant_notes
+moderation_actions
 public_tenant_notes
 ```
 

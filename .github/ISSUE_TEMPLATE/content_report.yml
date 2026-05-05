@@ -1,0 +1,46 @@
+name: Content report
+description: Report a Tenant Note or public content safety issue.
+title: "[Content Report]: "
+labels: ["moderation"]
+body:
+  - type: input
+    id: tenant
+    attributes:
+      label: Tenant or route
+      description: Add the tenant slug, profile route, or URL where the content appears.
+      placeholder: /profile/example
+    validations:
+      required: true
+  - type: dropdown
+    id: report_type
+    attributes:
+      label: Report type
+      options:
+        - Spam or unrelated promotion
+        - Phishing or wallet safety risk
+        - Harassment or targeted abuse
+        - Private information
+        - Impersonation
+        - Illegal content
+        - Other guideline issue
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Reported content
+      description: Paste the visible note text, note id, wallet label, or enough context to locate it.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for review
+      description: Explain why this should be reviewed under the community guidelines.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or screenshots
+      description: Add links, screenshots, or extra context when available.

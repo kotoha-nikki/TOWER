@@ -29,6 +29,8 @@ npm run qa
 
 This runs data validation, tests, and the production build.
 
+It also refreshes the registry and moderation operations reports.
+
 ## Tenant Registry Updates
 
 When updating `data/tenants.json`:
@@ -47,3 +49,21 @@ Wallet identity, saves, and notes must stay server-mediated:
 - Supabase service role key remains server-only.
 - Wallet signatures create sessions, not transactions.
 - Public counts and notes should be readable without wallet login.
+
+## Moderation Checks
+
+Run:
+
+```bash
+npm run moderation:report
+```
+
+This checks:
+
+- moderation documentation
+- community guidelines
+- content report issue template
+- public note visibility filters
+- reserved moderation action coverage
+
+Moderation workflow details live in `docs/moderation.md`.

@@ -32,6 +32,7 @@ Tower Map is designed around these public and interactive surfaces:
 - saved tenants
 - public save counts
 - tenant notes
+- moderation and safety workflow
 
 ## Positioning
 

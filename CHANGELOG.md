@@ -2,6 +2,16 @@
 
 All notable repository changes are documented here.
 
+## 1.1.2
+
+- Added moderation and safety workflow documentation.
+- Added community guidelines for Tenant Notes.
+- Added moderation report script and generated summary output.
+- Reserved Supabase `moderation_actions` audit table.
+- Documented visible, hidden, deleted, wallet ban, and wallet unban workflows.
+- Added content report GitHub issue template.
+- Updated README with the Moderation Model.
+
 ## 1.1.1
 
 - Added registry operations report script.

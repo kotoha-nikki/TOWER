@@ -79,3 +79,13 @@ Tower Map will be built in visible stages, like a tower under construction.
 - release notes
 - issue templates
 - data maintenance workflow
+
+## Stage 10: Moderation And Safety
+
+- Tenant Notes review rules
+- community guidelines
+- content report issue template
+- reserved moderation actions audit table
+- hidden / deleted note workflow
+- wallet ban / unban workflow
+- moderation report

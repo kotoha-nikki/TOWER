@@ -1,5 +1,19 @@
 # Release Notes
 
+## v1.1.2 - Moderation And Safety Layer
+
+Tower Map added the first moderation and safety workflow for Tenant Notes.
+
+Highlights:
+
+- Tenant Notes moderation rules
+- Community guidelines
+- Content report issue template
+- Reserved Supabase `moderation_actions` audit table
+- Hidden note, deleted note, wallet ban, and wallet unban workflow notes
+- Moderation report script
+- Generated `reports/moderation-summary.json`
+
 ## v1.1.1 - Registry Operations
 
 Tower Map added the first registry operations layer.

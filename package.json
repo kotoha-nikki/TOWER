@@ -1,6 +1,6 @@
 {
   "name": "tower-map",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,8 +10,9 @@
     "test": "node --test tests/*.test.mjs",
     "validate:data": "node scripts/validate-data.mjs",
     "registry:report": "node scripts/registry-report.mjs",
+    "moderation:report": "node scripts/moderation-report.mjs",
     "release:check": "node scripts/check-release.mjs",
-    "qa": "npm run validate:data && npm run registry:report && npm test && npm run build"
+    "qa": "npm run validate:data && npm run registry:report && npm run moderation:report && npm test && npm run build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.1",

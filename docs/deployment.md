@@ -58,6 +58,7 @@ npm run build
 ## Release Checklist
 
 - Data validation passes.
+- Moderation report passes.
 - Tests pass.
 - Production build passes.
 - README version matches `package.json`.

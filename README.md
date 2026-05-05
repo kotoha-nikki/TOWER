@@ -17,8 +17,8 @@ part directory, part archive, part public attention layer.
 ## Current Release
 
 ```text
-version: 1.1.1
-status: public tower + wallet identity + saves + tenant notes + registry operations
+version: 1.1.2
+status: public tower + wallet identity + saves + tenant notes + moderation + registry operations
 website: https://www.towermap.fun/
 repository: https://github.com/kotoha-nikki/TOWER
 ```
@@ -40,6 +40,9 @@ repository: https://github.com/kotoha-nikki/TOWER
 - Save / Saved controls for signed-in wallets
 - Tenant Notes for wallet-gated public comments
 - Moderation foundation, rate limit, and soft delete for notes
+- Tenant Notes moderation rules and community guidelines
+- Content report issue workflow
+- Moderation operations report
 - Data validation scripts
 - Registry operations report
 - Node test suite
@@ -55,6 +58,7 @@ Tower Map treats the ecosystem as a high-rise.
 - Floors are editorial tiers, not random rows.
 - Saves turn wallet attention into a public signal.
 - Tenant Notes turn profiles into living rooms of commentary.
+- Moderation keeps Tenant Notes community-readable instead of unmanaged.
 - Registry operations keep the building inspectable as it grows.
 - Japanese is part of the product surface, not just a translation pass.
 
@@ -79,6 +83,12 @@ notes are browsable without login.
 
 Wallet signatures create identity for saves and tenant notes. The signed
 message does not authorize transactions.
+
+**Moderated community surface**
+
+Tenant Notes are public and wallet-gated, but they are not an unmanaged message
+board. Tower Map documents review rules, content reports, hidden/deleted note
+states, and wallet-level restriction logic so profiles can stay useful and safe.
 
 **Operations-minded registry**
 
@@ -169,6 +179,37 @@ It tracks:
 - Duplicate tickers
 - Maintenance review flags
 
+## Moderation Model
+
+Tower Map allows public Tenant Notes, but the comment layer is designed as a
+moderated community surface.
+
+```bash
+npm run moderation:report
+```
+
+The report writes:
+
+```text
+reports/moderation-summary.json
+```
+
+It checks:
+
+- Tenant Notes review rules
+- Community guidelines
+- Content report issue template
+- Visible / hidden / deleted note states
+- Reserved `moderation_actions` workflow
+- Hide note, delete note, wallet ban, and wallet unban action coverage
+
+Moderation documentation:
+
+```text
+docs/moderation.md
+docs/community-guidelines.md
+```
+
 ## Supabase Tables
 
 Run these SQL files in Supabase:
@@ -187,6 +228,7 @@ wallet_login_nonces
 tenant_saves
 tenant_save_counts
 tenant_notes
+moderation_actions
 public_tenant_notes
 ```
 
@@ -243,6 +285,12 @@ Registry operations report:
 npm run registry:report
 ```
 
+Moderation operations report:
+
+```bash
+npm run moderation:report
+```
+
 Security check:
 
 ```bash
@@ -281,6 +329,7 @@ npm audit --omit=dev
 +-- scripts/
 |   +-- check-release.mjs
 |   +-- registry-report.mjs
+|   +-- moderation-report.mjs
 |   +-- validate-data.mjs
 +-- tests/
 |   +-- data-integrity.test.mjs
@@ -293,6 +342,8 @@ npm audit --omit=dev
 |   +-- i18n.md
 |   +-- maintenance.md
 |   +-- methodology.md
+|   +-- moderation.md
+|   +-- community-guidelines.md
 |   +-- project-overview.md
 |   +-- registry-operations.md
 |   +-- release-notes.md
@@ -309,6 +360,7 @@ npm audit --omit=dev
 |   +-- banner.png
 +-- reports/
 |   +-- registry-summary.json
+|   +-- moderation-summary.json
 +-- supabase/
 |   +-- tenant-notes.sql
 |   +-- tenant-saves.sql

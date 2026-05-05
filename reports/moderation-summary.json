@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-05-05T08:11:12.991Z",
+  "moderation": {
+    "scope": "Tenant Notes",
+    "publicReadModel": "visible notes only",
+    "reportTemplate": ".github/ISSUE_TEMPLATE/content_report.yml",
+    "reservedActionTable": "public.moderation_actions"
+  },
+  "checks": {
+    "moderationDocPresent": true,
+    "communityGuidelinesPresent": true,
+    "tenantNotesDocLinksModeration": true,
+    "contentReportTemplatePresent": true,
+    "readmeMentionsModerationModel": true,
+    "moderationActionsTableReserved": true,
+    "publicViewFiltersVisibleNotes": true,
+    "noteStatuses": {
+      "visible": true,
+      "hidden": true,
+      "deleted": true
+    },
+    "moderationActions": {
+      "note_review": true,
+      "hide_note": true,
+      "delete_note": true,
+      "wallet_ban": true,
+      "wallet_unban": true
+    }
+  },
+  "reviewFlags": {
+    "missingDocs": [],
+    "missingWorkflow": [],
+    "missingStatuses": [],
+    "missingActions": []
+  },
+  "ready": true
+}

@@ -7,12 +7,14 @@ Describe what changed and why.
 - [ ] Product surface
 - [ ] Data registry
 - [ ] Wallet / API layer
+- [ ] Moderation / safety
 - [ ] Documentation
 - [ ] Operations / QA
 
 ## Checks
 
 - [ ] `npm run validate:data`
+- [ ] `npm run moderation:report`
 - [ ] `npm test`
 - [ ] `npm run build`
 - [ ] Supabase schema changes documented, if applicable
