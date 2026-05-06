@@ -26,16 +26,12 @@ repository: https://github.com/kotoha-nikki/TOWER
 
 ## Official Links
 
-Tower Map has one product identity across its public surfaces. The website is
-the public experience. The GitHub repository is the open construction record.
-The X account is the public update channel.
+This repository is the public build record for Tower Map.
 
-```text
-Website:    https://www.towermap.fun
-X:          https://x.com/TowerMapFun
-Repository: https://github.com/kotoha-nikki/TOWER
-Releases:   https://github.com/kotoha-nikki/TOWER/releases
-```
+- Website: [towermap.fun](https://www.towermap.fun)
+- X: [@TowerMapFun](https://x.com/TowerMapFun)
+- Repository: [kotoha-nikki/TOWER](https://github.com/kotoha-nikki/TOWER)
+- Releases: [Tower Map releases](https://github.com/kotoha-nikki/TOWER/releases)
 
 ## What Is Live
 
