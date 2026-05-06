@@ -1,0 +1,511 @@
+{
+  "generatedAt": "2026-05-06T05:46:04.798Z",
+  "source": {
+    "registry": "data/tenants.json",
+    "floors": "data/floors.json",
+    "categories": "data/categories.json",
+    "interactionExport": "data/analytics.sample.json",
+    "analyticsInputGeneratedAt": "2026-05-06T00:00:00.000Z"
+  },
+  "towerPulse": {
+    "tenantCount": 287,
+    "floorCount": 23,
+    "categoryCount": 9,
+    "totalSaves": 632,
+    "totalNotes": 185,
+    "tenantsWithSaves": 10,
+    "tenantsWithNotes": 10,
+    "hottestFloor": {
+      "floorNumber": 22,
+      "slug": "cornerstones",
+      "label": "Cornerstones",
+      "tier": "upper",
+      "tenantCount": 3,
+      "averageHeat": 92.67,
+      "saveCount": 195,
+      "noteCount": 40,
+      "pulseScore": 398.67
+    },
+    "mostSavedTenant": {
+      "slug": "solana",
+      "name": "Solana",
+      "ticker": "SOL",
+      "floor": 23,
+      "category": "Network",
+      "heat": 100,
+      "saveCount": 128,
+      "noteCount": 34,
+      "pulseScore": 412
+    },
+    "mostDiscussedTenant": {
+      "slug": "solana",
+      "name": "Solana",
+      "ticker": "SOL",
+      "floor": 23,
+      "category": "Network",
+      "heat": 100,
+      "saveCount": 128,
+      "noteCount": 34,
+      "pulseScore": 412
+    }
+  },
+  "mostSavedTenants": [
+    {
+      "slug": "solana",
+      "name": "Solana",
+      "ticker": "SOL",
+      "floor": 23,
+      "category": "Network",
+      "heat": 100,
+      "saveCount": 128,
+      "noteCount": 34,
+      "pulseScore": 412
+    },
+    {
+      "slug": "bio-protocol",
+      "name": "Bio Protocol",
+      "ticker": "BIO",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 99,
+      "saveCount": 86,
+      "noteCount": 24,
+      "pulseScore": 311.4
+    },
+    {
+      "slug": "ordi",
+      "name": "ORDI",
+      "ticker": "ORDI",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 98,
+      "saveCount": 72,
+      "noteCount": 9,
+      "pulseScore": 249.2
+    },
+    {
+      "slug": "official-trump",
+      "name": "Official Trump",
+      "ticker": "TRUMP",
+      "floor": 21,
+      "category": "Meme",
+      "heat": 82,
+      "saveCount": 64,
+      "noteCount": 28,
+      "pulseScore": 264.4
+    },
+    {
+      "slug": "kamino",
+      "name": "Kamino",
+      "ticker": "KMNO",
+      "floor": 21,
+      "category": "DeFi",
+      "heat": 84,
+      "saveCount": 58,
+      "noteCount": 22,
+      "pulseScore": 241.2
+    },
+    {
+      "slug": "fartcoin",
+      "name": "Fartcoin",
+      "ticker": "FARTCOIN",
+      "floor": 15,
+      "category": "Meme",
+      "heat": 52,
+      "saveCount": 51,
+      "noteCount": 19,
+      "pulseScore": 189.4
+    },
+    {
+      "slug": "bonk",
+      "name": "Bonk",
+      "ticker": "BONK",
+      "floor": 14,
+      "category": "Meme",
+      "heat": 51,
+      "saveCount": 49,
+      "noteCount": 17,
+      "pulseScore": 180
+    },
+    {
+      "slug": "jito",
+      "name": "Jito",
+      "ticker": "JTO",
+      "floor": 16,
+      "category": "NFT / Consumer",
+      "heat": 55,
+      "saveCount": 46,
+      "noteCount": 14,
+      "pulseScore": 171.4
+    },
+    {
+      "slug": "pyth-network",
+      "name": "Pyth Network",
+      "ticker": "PYTH",
+      "floor": 21,
+      "category": "Infrastructure",
+      "heat": 86,
+      "saveCount": 41,
+      "noteCount": 11,
+      "pulseScore": 186.20000000000002
+    },
+    {
+      "slug": "orca",
+      "name": "Orca",
+      "ticker": "ORCA",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 81,
+      "saveCount": 37,
+      "noteCount": 7,
+      "pulseScore": 164.40000000000003
+    }
+  ],
+  "mostDiscussedTenants": [
+    {
+      "slug": "solana",
+      "name": "Solana",
+      "ticker": "SOL",
+      "floor": 23,
+      "category": "Network",
+      "heat": 100,
+      "saveCount": 128,
+      "noteCount": 34,
+      "pulseScore": 412
+    },
+    {
+      "slug": "official-trump",
+      "name": "Official Trump",
+      "ticker": "TRUMP",
+      "floor": 21,
+      "category": "Meme",
+      "heat": 82,
+      "saveCount": 64,
+      "noteCount": 28,
+      "pulseScore": 264.4
+    },
+    {
+      "slug": "bio-protocol",
+      "name": "Bio Protocol",
+      "ticker": "BIO",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 99,
+      "saveCount": 86,
+      "noteCount": 24,
+      "pulseScore": 311.4
+    },
+    {
+      "slug": "kamino",
+      "name": "Kamino",
+      "ticker": "KMNO",
+      "floor": 21,
+      "category": "DeFi",
+      "heat": 84,
+      "saveCount": 58,
+      "noteCount": 22,
+      "pulseScore": 241.2
+    },
+    {
+      "slug": "fartcoin",
+      "name": "Fartcoin",
+      "ticker": "FARTCOIN",
+      "floor": 15,
+      "category": "Meme",
+      "heat": 52,
+      "saveCount": 51,
+      "noteCount": 19,
+      "pulseScore": 189.4
+    },
+    {
+      "slug": "bonk",
+      "name": "Bonk",
+      "ticker": "BONK",
+      "floor": 14,
+      "category": "Meme",
+      "heat": 51,
+      "saveCount": 49,
+      "noteCount": 17,
+      "pulseScore": 180
+    },
+    {
+      "slug": "jito",
+      "name": "Jito",
+      "ticker": "JTO",
+      "floor": 16,
+      "category": "NFT / Consumer",
+      "heat": 55,
+      "saveCount": 46,
+      "noteCount": 14,
+      "pulseScore": 171.4
+    },
+    {
+      "slug": "pyth-network",
+      "name": "Pyth Network",
+      "ticker": "PYTH",
+      "floor": 21,
+      "category": "Infrastructure",
+      "heat": 86,
+      "saveCount": 41,
+      "noteCount": 11,
+      "pulseScore": 186.20000000000002
+    },
+    {
+      "slug": "ordi",
+      "name": "ORDI",
+      "ticker": "ORDI",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 98,
+      "saveCount": 72,
+      "noteCount": 9,
+      "pulseScore": 249.2
+    },
+    {
+      "slug": "orca",
+      "name": "Orca",
+      "ticker": "ORCA",
+      "floor": 22,
+      "category": "NFT / Consumer",
+      "heat": 81,
+      "saveCount": 37,
+      "noteCount": 7,
+      "pulseScore": 164.40000000000003
+    }
+  ],
+  "hottestFloors": [
+    {
+      "floorNumber": 22,
+      "slug": "cornerstones",
+      "label": "Cornerstones",
+      "tier": "upper",
+      "tenantCount": 3,
+      "averageHeat": 92.67,
+      "saveCount": 195,
+      "noteCount": 40,
+      "pulseScore": 398.67
+    },
+    {
+      "floorNumber": 21,
+      "slug": "liquidity-suite",
+      "label": "Liquidity Suite",
+      "tier": "upper",
+      "tenantCount": 6,
+      "averageHeat": 82,
+      "saveCount": 163,
+      "noteCount": 61,
+      "pulseScore": 387.4
+    },
+    {
+      "floorNumber": 23,
+      "slug": "penthouse",
+      "label": "Penthouse",
+      "tier": "penthouse",
+      "tenantCount": 1,
+      "averageHeat": 100,
+      "saveCount": 128,
+      "noteCount": 34,
+      "pulseScore": 314.8
+    },
+    {
+      "floorNumber": 15,
+      "slug": "protocol-row",
+      "label": "Protocol Row",
+      "tier": "mid",
+      "tenantCount": 4,
+      "averageHeat": 52.25,
+      "saveCount": 51,
+      "noteCount": 19,
+      "pulseScore": 147.65
+    },
+    {
+      "floorNumber": 14,
+      "slug": "culture-row",
+      "label": "Culture Row",
+      "tier": "mid",
+      "tenantCount": 3,
+      "averageHeat": 51,
+      "saveCount": 49,
+      "noteCount": 17,
+      "pulseScore": 140.4
+    },
+    {
+      "floorNumber": 16,
+      "slug": "compute-wing",
+      "label": "Yield + Compute Wing",
+      "tier": "upper",
+      "tenantCount": 5,
+      "averageHeat": 54.6,
+      "saveCount": 46,
+      "noteCount": 14,
+      "pulseScore": 135
+    },
+    {
+      "floorNumber": 20,
+      "slug": "casino-floor",
+      "label": "Casino Floor",
+      "tier": "upper",
+      "tenantCount": 1,
+      "averageHeat": 66,
+      "saveCount": 0,
+      "noteCount": 0,
+      "pulseScore": 66
+    },
+    {
+      "floorNumber": 19,
+      "slug": "major-names",
+      "label": "Major Names",
+      "tier": "upper",
+      "tenantCount": 1,
+      "averageHeat": 63,
+      "saveCount": 0,
+      "noteCount": 0,
+      "pulseScore": 63
+    },
+    {
+      "floorNumber": 17,
+      "slug": "ai-floor",
+      "label": "AI Floor",
+      "tier": "upper",
+      "tenantCount": 1,
+      "averageHeat": 56,
+      "saveCount": 0,
+      "noteCount": 0,
+      "pulseScore": 56
+    },
+    {
+      "floorNumber": 18,
+      "slug": "meme-suite",
+      "label": "Meme Suite",
+      "tier": "upper",
+      "tenantCount": 1,
+      "averageHeat": 55,
+      "saveCount": 0,
+      "noteCount": 0,
+      "pulseScore": 55
+    }
+  ],
+  "categoryDistribution": [
+    {
+      "id": "meme",
+      "label": "Meme",
+      "tenantCount": 207,
+      "registryShare": 0.7213,
+      "saveCount": 164,
+      "noteCount": 64,
+      "defaultFloorRange": [
+        3,
+        20
+      ]
+    },
+    {
+      "id": "nft-consumer",
+      "label": "NFT / Consumer",
+      "tenantCount": 23,
+      "registryShare": 0.0801,
+      "saveCount": 241,
+      "noteCount": 54,
+      "defaultFloorRange": [
+        5,
+        16
+      ]
+    },
+    {
+      "id": "defi",
+      "label": "DeFi",
+      "tenantCount": 22,
+      "registryShare": 0.0767,
+      "saveCount": 58,
+      "noteCount": 22,
+      "defaultFloorRange": [
+        10,
+        21
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "tenantCount": 16,
+      "registryShare": 0.0557,
+      "saveCount": 0,
+      "noteCount": 0,
+      "defaultFloorRange": [
+        7,
+        18
+      ]
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "tenantCount": 14,
+      "registryShare": 0.0488,
+      "saveCount": 0,
+      "noteCount": 0,
+      "defaultFloorRange": [
+        4,
+        14
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure",
+      "tenantCount": 4,
+      "registryShare": 0.0139,
+      "saveCount": 41,
+      "noteCount": 11,
+      "defaultFloorRange": [
+        13,
+        22
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network",
+      "tenantCount": 1,
+      "registryShare": 0.0035,
+      "saveCount": 128,
+      "noteCount": 34,
+      "defaultFloorRange": [
+        21,
+        23
+      ]
+    },
+    {
+      "id": "culture-apps",
+      "label": "Culture / Apps",
+      "tenantCount": 0,
+      "registryShare": 0,
+      "saveCount": 0,
+      "noteCount": 0,
+      "defaultFloorRange": [
+        1,
+        15
+      ]
+    },
+    {
+      "id": "depin",
+      "label": "DePIN",
+      "tenantCount": 0,
+      "registryShare": 0,
+      "saveCount": 0,
+      "noteCount": 0,
+      "defaultFloorRange": [
+        8,
+        18
+      ]
+    }
+  ],
+  "verifiedCaRatio": {
+    "total": 287,
+    "verifiedCount": 0,
+    "pendingVerificationCount": 286,
+    "notApplicableCount": 1,
+    "verifiedRatio": 0
+  },
+  "reviewFlags": {
+    "unknownSaveSlugs": [],
+    "unknownNoteSlugs": [],
+    "emptyInteractionExport": false,
+    "zeroVerifiedCa": true
+  }
+}

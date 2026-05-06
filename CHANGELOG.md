@@ -2,6 +2,16 @@
 
 All notable repository changes are documented here.
 
+## 1.1.3
+
+- Added public analytics documentation.
+- Added public analytics export sample data.
+- Added analytics snapshot generation script.
+- Added `npm run analytics:snapshot`.
+- Added generated analytics snapshot output.
+- Added most saved tenants, most discussed tenants, hottest floors, category distribution, and verified CA ratio.
+- Updated README with the Public Analytics layer.
+
 ## 1.1.2
 
 - Added moderation and safety workflow documentation.

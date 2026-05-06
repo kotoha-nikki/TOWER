@@ -59,6 +59,7 @@ npm run build
 
 - Data validation passes.
 - Moderation report passes.
+- Analytics snapshot passes.
 - Tests pass.
 - Production build passes.
 - README version matches `package.json`.

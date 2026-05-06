@@ -1,5 +1,22 @@
 # Release Notes
 
+## v1.1.3 - Public Analytics Layer
+
+Tower Map added the first public analytics layer.
+
+Highlights:
+
+- Public analytics documentation
+- Analytics export sample data
+- Analytics snapshot generation script
+- Most saved tenants
+- Most discussed tenants
+- Hottest floors
+- Category distribution
+- Verified CA ratio
+- Generated `reports/analytics-snapshot.json`
+- Foundation for a future Tower Pulse page
+
 ## v1.1.2 - Moderation And Safety Layer
 
 Tower Map added the first moderation and safety workflow for Tenant Notes.

@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-05-06T00:00:00.000Z",
+  "source": {
+    "name": "Tower Map public analytics export",
+    "description": "Public interaction aggregates for Tower Map saves and Tenant Notes.",
+    "site": "https://www.towermap.fun/",
+    "repository": "https://github.com/kotoha-nikki/TOWER"
+  },
+  "tenantSaveCounts": {
+    "solana": 128,
+    "bio-protocol": 86,
+    "ordi": 72,
+    "official-trump": 64,
+    "kamino": 58,
+    "fartcoin": 51,
+    "bonk": 49,
+    "jito": 46,
+    "pyth-network": 41,
+    "orca": 37
+  },
+  "tenantNoteCounts": {
+    "solana": 34,
+    "official-trump": 28,
+    "bio-protocol": 24,
+    "kamino": 22,
+    "fartcoin": 19,
+    "bonk": 17,
+    "jito": 14,
+    "pyth-network": 11,
+    "ordi": 9,
+    "orca": 7
+  }
+}

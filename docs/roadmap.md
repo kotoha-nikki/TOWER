@@ -89,3 +89,15 @@ Tower Map will be built in visible stages, like a tower under construction.
 - hidden / deleted note workflow
 - wallet ban / unban workflow
 - moderation report
+
+## Stage 11: Public Analytics
+
+- public analytics documentation
+- analytics export shape
+- analytics snapshot generation
+- most saved tenants
+- most discussed tenants
+- hottest floors
+- category distribution
+- verified CA ratio
+- Tower Pulse preparation

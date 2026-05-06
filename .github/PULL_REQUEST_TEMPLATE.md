@@ -8,6 +8,7 @@ Describe what changed and why.
 - [ ] Data registry
 - [ ] Wallet / API layer
 - [ ] Moderation / safety
+- [ ] Public analytics
 - [ ] Documentation
 - [ ] Operations / QA
 
@@ -15,6 +16,7 @@ Describe what changed and why.
 
 - [ ] `npm run validate:data`
 - [ ] `npm run moderation:report`
+- [ ] `npm run analytics:snapshot`
 - [ ] `npm test`
 - [ ] `npm run build`
 - [ ] Supabase schema changes documented, if applicable

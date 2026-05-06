@@ -29,7 +29,7 @@ npm run qa
 
 This runs data validation, tests, and the production build.
 
-It also refreshes the registry and moderation operations reports.
+It also refreshes the registry, moderation, and analytics reports.
 
 ## Tenant Registry Updates
 
@@ -67,3 +67,27 @@ This checks:
 - reserved moderation action coverage
 
 Moderation workflow details live in `docs/moderation.md`.
+
+## Analytics Snapshot
+
+Run:
+
+```bash
+npm run analytics:snapshot
+```
+
+This generates:
+
+```text
+reports/analytics-snapshot.json
+```
+
+It tracks Tower Map's public observation layer:
+
+- most saved tenants
+- most discussed tenants
+- hottest floors
+- category distribution
+- verified CA ratio
+
+Analytics workflow details live in `docs/analytics.md`.

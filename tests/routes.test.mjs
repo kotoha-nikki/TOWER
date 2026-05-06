@@ -38,3 +38,16 @@ test("moderation workflow documentation and issue template are present", async (
   assert.ok(issueTemplates.includes("content_report.yml"));
   assert.ok(readme.includes("## Moderation Model"));
 });
+
+test("public analytics layer files and README section are present", async () => {
+  const docs = await readdir("docs");
+  const dataFiles = await readdir("data");
+  const scripts = await readdir("scripts");
+  const readme = await readFile("README.md", "utf8");
+
+  assert.ok(docs.includes("analytics.md"));
+  assert.ok(dataFiles.includes("analytics.sample.json"));
+  assert.ok(scripts.includes("generate-analytics-snapshot.mjs"));
+  assert.ok(readme.includes("## Public Analytics"));
+  assert.ok(readme.includes("Tower Pulse"));
+});
