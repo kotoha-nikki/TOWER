@@ -19,8 +19,22 @@ part directory, part archive, part public attention layer.
 ```text
 version: 1.1.3
 status: public tower + wallet identity + saves + tenant notes + moderation + public analytics
-website: https://www.towermap.fun/
+website: https://www.towermap.fun
+x: https://x.com/TowerMapFun
 repository: https://github.com/kotoha-nikki/TOWER
+```
+
+## Official Links
+
+Tower Map has one product identity across its public surfaces. The website is
+the public experience. The GitHub repository is the open construction record.
+The X account is the public update channel.
+
+```text
+Website:    https://www.towermap.fun
+X:          https://x.com/TowerMapFun
+Repository: https://github.com/kotoha-nikki/TOWER
+Releases:   https://github.com/kotoha-nikki/TOWER/releases
 ```
 
 ## What Is Live
@@ -160,7 +174,7 @@ DELETE /api/notes           soft-delete a note owned by the current wallet
 data/floors.json          floor schema
 data/categories.json      category schema
 data/tenants.json         live tenant registry snapshot
-data/analytics.sample.json public analytics export shape
+data/analytics.sample.json  public analytics export shape
 data/registry-meta.json   registry metadata
 ```
 

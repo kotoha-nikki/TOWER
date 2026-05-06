@@ -51,3 +51,12 @@ test("public analytics layer files and README section are present", async () => 
   assert.ok(readme.includes("## Public Analytics"));
   assert.ok(readme.includes("Tower Pulse"));
 });
+
+test("README documents official public links", async () => {
+  const readme = await readFile("README.md", "utf8");
+
+  assert.ok(readme.includes("## Official Links"));
+  assert.ok(readme.includes("https://www.towermap.fun"));
+  assert.ok(readme.includes("https://x.com/TowerMapFun"));
+  assert.ok(readme.includes("https://github.com/kotoha-nikki/TOWER"));
+});
