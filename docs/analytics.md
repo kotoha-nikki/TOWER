@@ -7,6 +7,8 @@ signals.
 
 This is the foundation for a future **Tower Pulse** page.
 
+Tower Pulse planning lives in `docs/tower-pulse.md`.
+
 ## What The Layer Measures
 
 The analytics snapshot tracks:
@@ -110,3 +112,6 @@ This layer prepares the repository for a public Tower Pulse page that can show:
 
 The page can read the generated JSON directly or replace the snapshot with a
 server route later.
+
+See `docs/tower-pulse.md` for page sections, route shape, copy guidance, and
+release readiness checks.

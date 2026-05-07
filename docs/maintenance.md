@@ -91,3 +91,16 @@ It tracks Tower Map's public observation layer:
 - verified CA ratio
 
 Analytics workflow details live in `docs/analytics.md`.
+
+## Tower Pulse Planning
+
+Tower Pulse is the planned public analytics page for Tower Map. Before building
+or changing it, review:
+
+```text
+docs/tower-pulse.md
+reports/analytics-snapshot.json
+```
+
+The page should present Tower Map-native signals without turning the product
+into a price terminal.

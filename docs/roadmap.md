@@ -101,3 +101,13 @@ Tower Map will be built in visible stages, like a tower under construction.
 - category distribution
 - verified CA ratio
 - Tower Pulse preparation
+
+## Stage 12: Tower Pulse
+
+- public pulse route planning
+- analytics snapshot page sections
+- saved tenant signal display
+- discussed tenant signal display
+- floor signal display
+- registry composition display
+- CA verification progress display
