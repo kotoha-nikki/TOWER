@@ -5,6 +5,8 @@
 **An editorial high-rise map for tracking signal, culture, liquidity, and
 market gravity across the Solana ecosystem.**
 
+少しずつ、塔に灯りを入れていく。
+
 Tower Map turns ecosystem research into a living building. Every project is a
 tenant. Every floor represents a different mix of visibility, liquidity,
 cultural heat, continuity, and editorial relevance.
@@ -12,7 +14,14 @@ cultural heat, continuity, and editorial relevance.
 It is not a generic token list or a raw price leaderboard. It is a curated map:
 part directory, part archive, part public attention layer.
 
-少しずつ、塔に灯りを入れていく。
+## Official Links
+
+This repository is the open build record for Tower Map.
+
+- Website: [towermap.fun](https://www.towermap.fun)
+- X: [@TowerMapFun](https://x.com/TowerMapFun)
+- Repository: [kotoha-nikki/TOWER](https://github.com/kotoha-nikki/TOWER)
+- Releases: [Tower Map releases](https://github.com/kotoha-nikki/TOWER/releases)
 
 ## Current Release
 
@@ -24,23 +33,31 @@ x: https://x.com/TowerMapFun
 repository: https://github.com/kotoha-nikki/TOWER
 ```
 
-## Official Links
+## Why Tower Map Exists
 
-This repository is the public build record for Tower Map.
+Crypto ecosystems are not flat.
 
-- Website: [towermap.fun](https://www.towermap.fun)
-- X: [@TowerMapFun](https://x.com/TowerMapFun)
-- Repository: [kotoha-nikki/TOWER](https://github.com/kotoha-nikki/TOWER)
-- Releases: [Tower Map releases](https://github.com/kotoha-nikki/TOWER/releases)
+Some projects have market gravity. Some have cultural heat. Some are quiet but
+structural. Some are loud for a week and disappear. Some slowly become part of
+the building.
 
-## What Is Live
+Tower Map gives that shape a public interface.
+
+- Tenants are projects, tokens, memes, apps, infrastructure, and communities.
+- Floors are editorial tiers, not random rows.
+- Saves turn wallet attention into a public signal.
+- Tenant Notes let profiles collect public memory.
+- Moderation keeps public rooms readable.
+- Analytics turns tower activity into an observation layer.
+
+## Current Build Layers
 
 - Public tower homepage
 - Interactive floor map
 - Tenant directory side sheet
 - Tenant profile pages
 - Methodology page
-- English and Japanese interface layer
+- English interface with a Japanese public layer
 - Live tenant registry data
 - Contract address verification fields
 - Phantom / Solflare / Backpack wallet connect
@@ -49,36 +66,13 @@ This repository is the public build record for Tower Map.
 - Public tenant save counts
 - Save / Saved controls for signed-in wallets
 - Tenant Notes for wallet-gated public comments
-- Moderation foundation, rate limit, and soft delete for notes
 - Tenant Notes moderation rules and community guidelines
 - Content report issue workflow
+- Registry operations report
 - Moderation operations report
 - Public analytics snapshot
 - Tower Pulse implementation plan
-- Most saved tenants
-- Most discussed tenants
-- Hottest floors
-- Category distribution
-- Verified CA ratio
-- Data validation scripts
-- Registry operations report
-- Node test suite
-- Release consistency checks
-- Deployment, maintenance, changelog, issue, and PR workflows
-
-## Core Narrative
-
-Tower Map treats the ecosystem as a high-rise.
-
-- Higher floors carry stronger combined signal.
-- Tenants are projects, tokens, memes, apps, infrastructure, and communities.
-- Floors are editorial tiers, not random rows.
-- Saves turn wallet attention into a public signal.
-- Tenant Notes turn profiles into living rooms of commentary.
-- Moderation keeps Tenant Notes community-readable instead of unmanaged.
-- Public analytics turns Tower Map activity into its own observation layer.
-- Registry operations keep the building inspectable as it grows.
-- Japanese is part of the product surface, not just a translation pass.
+- Node test suite and release checks
 
 ## Product Pillars
 
@@ -94,13 +88,13 @@ financial instruments that do not behave like native ecosystem tenants.
 
 **Public by default**
 
-The tower, methodology, directory, profiles, save counts, and visible tenant
-notes are browsable without login.
+The tower, methodology, directory, profiles, save counts, and visible Tenant
+Notes are browsable without login.
 
 **Wallet-native interaction**
 
-Wallet signatures create identity for saves and tenant notes. The signed
-message does not authorize transactions.
+Wallet signatures create identity for saves and Tenant Notes. The signed
+message does not authorize a transaction or move funds.
 
 **Moderated community surface**
 
@@ -110,20 +104,9 @@ states, and wallet-level restriction logic so profiles can stay useful and safe.
 
 **Public analytics**
 
-Tower Map now produces its own public observation data from the registry,
-wallet saves, Tenant Notes activity, floor heat, category coverage, and contract
+Tower Map produces its own public observation data from the registry, wallet
+saves, Tenant Notes activity, floor heat, category coverage, and contract
 verification status. This prepares the product for a future Tower Pulse page.
-
-**Operations-minded registry**
-
-Tenant data is checked by scripts, tests, and generated reports before release.
-The registry has floor occupancy, category coverage, CA status, duplicate
-ticker, and review flag visibility.
-
-**International surface**
-
-The app is English-first in code and technical documentation, with Japanese as a
-public cultural layer.
 
 ## Tech Stack
 
@@ -134,6 +117,8 @@ public cultural layer.
 - Ed25519 wallet signature verification with `tweetnacl`
 - Base58 wallet encoding with `bs58`
 - HttpOnly HMAC-signed session cookies
+- Node test runner
+- Generated operations reports
 
 ## App Routes
 
@@ -147,6 +132,14 @@ public cultural layer.
 /profile/[slug]       default tenant profile
 /en/profile/[slug]    English tenant profile
 /ja/profile/[slug]    Japanese tenant profile
+```
+
+Planned Tower Pulse routes:
+
+```text
+/pulse
+/en/pulse
+/ja/pulse
 ```
 
 ## API Routes
@@ -168,108 +161,46 @@ DELETE /api/notes           soft-delete a note owned by the current wallet
 ## Data Layers
 
 ```text
-data/floors.json          floor schema
-data/categories.json      category schema
-data/tenants.json         live tenant registry snapshot
+data/floors.json            floor schema
+data/categories.json        category schema
+data/tenants.json           live tenant registry snapshot
 data/analytics.sample.json  public analytics export shape
-data/registry-meta.json   registry metadata
+data/registry-meta.json     registry metadata
 ```
 
 The tenant registry mirrors the public Tower Map API snapshot and keeps
 verification fields separate from display fields. Contract addresses are not
 invented.
 
-## Registry Operations
+## Operations
 
-The registry is not maintained as a random list. Tower Map includes an
-operations report for inspecting tenant data before releases.
+Tower Map includes repeatable checks so the building stays inspectable as it
+grows.
 
 ```bash
+npm run validate:data
 npm run registry:report
+npm run moderation:report
+npm run analytics:snapshot
+npm test
+npm run release:check
 ```
 
-The report writes:
+Generated reports:
 
 ```text
 reports/registry-summary.json
-```
-
-It tracks:
-
-- Floor occupancy
-- Category coverage
-- CA verification status
-- Empty floors
-- Overcrowded floors
-- Duplicate tickers
-- Maintenance review flags
-
-## Moderation Model
-
-Tower Map allows public Tenant Notes, but the comment layer is designed as a
-moderated community surface.
-
-```bash
-npm run moderation:report
-```
-
-The report writes:
-
-```text
 reports/moderation-summary.json
-```
-
-It checks:
-
-- Tenant Notes review rules
-- Community guidelines
-- Content report issue template
-- Visible / hidden / deleted note states
-- Reserved `moderation_actions` workflow
-- Hide note, delete note, wallet ban, and wallet unban action coverage
-
-Moderation documentation:
-
-```text
-docs/moderation.md
-docs/community-guidelines.md
-```
-
-## Public Analytics
-
-Tower Map is beginning to publish its own observation layer. The analytics
-snapshot turns real Tower Map product signals into a public pulse for the
-building.
-
-```bash
-npm run analytics:snapshot
-```
-
-The snapshot writes:
-
-```text
 reports/analytics-snapshot.json
 ```
 
-It tracks:
-
-- Most saved tenants
-- Most discussed tenants
-- Hottest floors
-- Category distribution
-- Verified CA ratio
-
-Analytics documentation:
+Operations documentation:
 
 ```text
+docs/registry-operations.md
+docs/moderation.md
+docs/community-guidelines.md
 docs/analytics.md
-```
-
-This layer prepares the repository for a future Tower Pulse page.
-
-Tower Pulse implementation planning:
-
-```text
 docs/tower-pulse.md
 docs/tower-pulse-implementation.md
 ```
@@ -337,124 +268,33 @@ Full QA pass:
 npm run qa
 ```
 
-Data validation only:
-
-```bash
-npm run validate:data
-```
-
-Registry operations report:
-
-```bash
-npm run registry:report
-```
-
-Moderation operations report:
-
-```bash
-npm run moderation:report
-```
-
-Public analytics snapshot:
-
-```bash
-npm run analytics:snapshot
-```
-
 Security check:
 
 ```bash
 npm audit --omit=dev
 ```
 
-## Project Structure
+## Repository Map
 
 ```text
-.
-+-- app/
-|   +-- api/auth/
-|   +-- api/favorites/
-|   +-- api/notes/
-|   +-- en/
-|   +-- ja/
-|   +-- methodology/
-|   +-- profile/
-|   +-- globals.css
-|   +-- layout.tsx
-|   +-- page.tsx
-+-- components/
-|   +-- localized-home-page.tsx
-|   +-- localized-methodology-page.tsx
-|   +-- localized-profile-page.tsx
-|   +-- site-header.tsx
-|   +-- tenant-notes.tsx
-|   +-- tenant-save-control.tsx
-|   +-- tower-experience.tsx
-|   +-- wallet-identity.tsx
-+-- data/
-|   +-- categories.json
-|   +-- floors.json
-|   +-- analytics.sample.json
-|   +-- registry-meta.json
-|   +-- tenants.json
-+-- scripts/
-|   +-- check-release.mjs
-|   +-- generate-analytics-snapshot.mjs
-|   +-- registry-report.mjs
-|   +-- moderation-report.mjs
-|   +-- validate-data.mjs
-+-- tests/
-|   +-- data-integrity.test.mjs
-|   +-- routes.test.mjs
-+-- docs/
-|   +-- architecture.md
-|   +-- analytics.md
-|   +-- data-model.md
-|   +-- deployment.md
-|   +-- design-system.md
-|   +-- i18n.md
-|   +-- maintenance.md
-|   +-- methodology.md
-|   +-- moderation.md
-|   +-- community-guidelines.md
-|   +-- project-overview.md
-|   +-- registry-operations.md
-|   +-- release-notes.md
-|   +-- roadmap.md
-|   +-- tenant-notes.md
-|   +-- tenant-registry.md
-|   +-- tenant-saves.md
-|   +-- tower-pulse.md
-|   +-- tower-pulse-implementation.md
-|   +-- wallet-identity.md
-+-- lib/
-|   +-- auth/
-|   +-- i18n.ts
-|   +-- tower-data.ts
-+-- public/
-|   +-- banner.png
-+-- reports/
-|   +-- analytics-snapshot.json
-|   +-- registry-summary.json
-|   +-- moderation-summary.json
-+-- supabase/
-|   +-- tenant-notes.sql
-|   +-- tenant-saves.sql
-|   +-- wallet-identity.sql
-+-- .github/
-|   +-- ISSUE_TEMPLATE/
-|   +-- PULL_REQUEST_TEMPLATE.md
-+-- CHANGELOG.md
+app/          Next.js routes and API routes
+components/   shared React components
+data/         floor, category, tenant, registry, and analytics data
+docs/         architecture, operations, moderation, analytics, and roadmap docs
+lib/          data helpers and wallet auth utilities
+public/       public visual assets
+reports/      generated registry, moderation, and analytics reports
+scripts/      validation and report generation scripts
+supabase/     database schema files
+tests/        Node test suite
 ```
 
 ## Builder Notes
 
 This repository is built in visible layers, like a tower under construction.
 
-The foundation is no longer empty: the public map, registry, language layer,
-wallet identity, save system, tenant notes layer, QA workflow, registry
-operations layer, moderation workflow, and public analytics layer are already
-in place. Future layers can add the Tower Pulse page, richer moderation tooling,
-operations dashboards, data maintenance workflows, and more editorial surfaces.
+The public map, registry, language layer, wallet identity, save system, Tenant
+Notes layer, QA workflow, registry operations, moderation workflow, public
+analytics layer, and Tower Pulse implementation plan are already in place.
 
-この塔は、少しずつ上に伸びていきます。
+この塔は、まだ建設中です。

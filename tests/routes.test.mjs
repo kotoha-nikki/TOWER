@@ -36,7 +36,8 @@ test("moderation workflow documentation and issue template are present", async (
   assert.ok(docs.includes("moderation.md"));
   assert.ok(docs.includes("community-guidelines.md"));
   assert.ok(issueTemplates.includes("content_report.yml"));
-  assert.ok(readme.includes("## Moderation Model"));
+  assert.ok(readme.includes("docs/moderation.md"));
+  assert.ok(readme.includes("docs/community-guidelines.md"));
 });
 
 test("public analytics layer files and README section are present", async () => {
@@ -50,7 +51,7 @@ test("public analytics layer files and README section are present", async () => 
   assert.ok(docs.includes("tower-pulse-implementation.md"));
   assert.ok(dataFiles.includes("analytics.sample.json"));
   assert.ok(scripts.includes("generate-analytics-snapshot.mjs"));
-  assert.ok(readme.includes("## Public Analytics"));
+  assert.ok(readme.includes("docs/analytics.md"));
   assert.ok(readme.includes("Tower Pulse"));
 });
 
