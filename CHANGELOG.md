@@ -2,6 +2,14 @@
 
 All notable repository changes are documented here.
 
+## 1.1.5
+
+- Added Tower Pulse implementation plan.
+- Documented planned `/pulse`, `/en/pulse`, and `/ja/pulse` routes.
+- Added component ownership notes for the first Tower Pulse page.
+- Added data source, empty state, mobile layout, accessibility, and future Supabase aggregate guidance.
+- Updated Tower Pulse, analytics, roadmap, and maintenance docs.
+
 ## 1.1.3
 
 - Added public analytics documentation.

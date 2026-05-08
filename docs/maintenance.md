@@ -99,6 +99,7 @@ or changing it, review:
 
 ```text
 docs/tower-pulse.md
+docs/tower-pulse-implementation.md
 reports/analytics-snapshot.json
 ```
 

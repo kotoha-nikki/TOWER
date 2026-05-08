@@ -25,6 +25,9 @@ npm run analytics:snapshot
 
 The source model is documented in `docs/analytics.md`.
 
+The first web implementation path is documented in
+`docs/tower-pulse-implementation.md`.
+
 ## First Page Sections
 
 The first public page can be built from five sections:
@@ -145,3 +148,5 @@ Before shipping Tower Pulse:
 - Empty or missing interaction fields should have readable fallback states.
 - The page should link back to the tower and methodology.
 - Public copy should distinguish Tower Map signal from market data.
+
+Implementation details live in `docs/tower-pulse-implementation.md`.

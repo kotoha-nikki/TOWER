@@ -105,6 +105,7 @@ Tower Map will be built in visible stages, like a tower under construction.
 ## Stage 12: Tower Pulse
 
 - public pulse route planning
+- public pulse implementation plan
 - analytics snapshot page sections
 - saved tenant signal display
 - discussed tenant signal display

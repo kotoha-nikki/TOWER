@@ -17,7 +17,7 @@ part directory, part archive, part public attention layer.
 ## Current Release
 
 ```text
-version: 1.1.3
+version: 1.1.5
 status: public tower + wallet identity + saves + tenant notes + moderation + public analytics
 website: https://www.towermap.fun
 x: https://x.com/TowerMapFun
@@ -54,6 +54,7 @@ This repository is the public build record for Tower Map.
 - Content report issue workflow
 - Moderation operations report
 - Public analytics snapshot
+- Tower Pulse implementation plan
 - Most saved tenants
 - Most discussed tenants
 - Hottest floors
@@ -266,6 +267,13 @@ docs/analytics.md
 
 This layer prepares the repository for a future Tower Pulse page.
 
+Tower Pulse implementation planning:
+
+```text
+docs/tower-pulse.md
+docs/tower-pulse-implementation.md
+```
+
 ## Supabase Tables
 
 Run these SQL files in Supabase:
@@ -416,6 +424,8 @@ npm audit --omit=dev
 |   +-- tenant-notes.md
 |   +-- tenant-registry.md
 |   +-- tenant-saves.md
+|   +-- tower-pulse.md
+|   +-- tower-pulse-implementation.md
 |   +-- wallet-identity.md
 +-- lib/
 |   +-- auth/

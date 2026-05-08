@@ -47,6 +47,7 @@ test("public analytics layer files and README section are present", async () => 
 
   assert.ok(docs.includes("analytics.md"));
   assert.ok(docs.includes("tower-pulse.md"));
+  assert.ok(docs.includes("tower-pulse-implementation.md"));
   assert.ok(dataFiles.includes("analytics.sample.json"));
   assert.ok(scripts.includes("generate-analytics-snapshot.mjs"));
   assert.ok(readme.includes("## Public Analytics"));

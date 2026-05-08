@@ -8,6 +8,7 @@ signals.
 This is the foundation for a future **Tower Pulse** page.
 
 Tower Pulse planning lives in `docs/tower-pulse.md`.
+Implementation notes live in `docs/tower-pulse-implementation.md`.
 
 ## What The Layer Measures
 

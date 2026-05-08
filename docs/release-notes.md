@@ -1,5 +1,19 @@
 # Release Notes
 
+## v1.1.5 - Tower Pulse Implementation Plan
+
+Tower Map added implementation planning for the future Tower Pulse page.
+
+Highlights:
+
+- Tower Pulse implementation plan
+- Planned `/pulse`, `/en/pulse`, and `/ja/pulse` routes
+- Component ownership notes
+- Analytics snapshot data source guidance
+- Empty state and mobile layout guidance
+- Accessibility notes
+- Future Supabase aggregate path
+
 ## v1.1.3 - Public Analytics Layer
 
 Tower Map added the first public analytics layer.
