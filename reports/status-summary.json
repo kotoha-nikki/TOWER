@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-05-11T11:28:32.593Z",
+  "towerHealth": {
+    "status": "healthy",
+    "label": "Tower operational health is steady",
+    "publicSite": "https://www.towermap.fun",
+    "maintenanceState": "complete",
+    "lastMaintenanceWindow": "2026-05-09T08:30:00.000Z"
+  },
+  "publicRoutes": {
+    "total": 5,
+    "healthy": 5,
+    "coverage": 1,
+    "routes": {
+      "/": "healthy",
+      "/en": "healthy",
+      "/ja": "healthy",
+      "/methodology": "healthy",
+      "/profile/[slug]": "healthy"
+    }
+  },
+  "walletLayer": {
+    "status": "healthy",
+    "supportedWallets": [
+      "Phantom",
+      "Solflare",
+      "Backpack"
+    ],
+    "walletConnect": "healthy",
+    "signedMessageLogin": "healthy",
+    "sessionCookies": "healthy"
+  },
+  "operations": {
+    "registry": {
+      "status": "healthy",
+      "source": "reports/registry-summary.json",
+      "generatedAt": "2026-05-11T11:28:09.605Z",
+      "tenantCount": 287,
+      "floorCount": 23,
+      "categoryCount": 9,
+      "trackedReviewFlags": 5
+    },
+    "moderation": {
+      "status": "healthy",
+      "source": "reports/moderation-summary.json",
+      "generatedAt": "2026-05-11T11:28:32.562Z",
+      "workflowReady": true,
+      "publicReadModel": "visible notes only"
+    },
+    "analytics": {
+      "status": "healthy",
+      "source": "reports/analytics-snapshot.json",
+      "generatedAt": "2026-05-11T11:28:09.616Z",
+      "tenantCount": 287,
+      "totalSaves": 632,
+      "totalNotes": 185
+    },
+    "releaseChecks": "active"
+  },
+  "reviewState": {
+    "label": "tracked maintenance",
+    "pendingContractVerification": 286,
+    "scheduledReviewItems": [
+      {
+        "type": "contract_verification",
+        "status": "tracked",
+        "count": 286,
+        "note": "Pending CA entries remain visible as scheduled verification work."
+      },
+      {
+        "type": "floor_balance",
+        "status": "tracked",
+        "count": 5,
+        "note": "High-occupancy floors are monitored for future placement review."
+      }
+    ]
+  },
+  "publicMessage": "Tower Map is online, monitored, and maintained through repeatable registry, moderation, analytics, and release checks.",
+  "notes": [
+    "Public browsing remains open.",
+    "Wallet-gated actions remain session protected.",
+    "Pending verification items are tracked as scheduled review work."
+  ]
+}

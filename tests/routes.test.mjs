@@ -55,6 +55,22 @@ test("public analytics layer files and README section are present", async () => 
   assert.ok(readme.includes("Tower Pulse"));
 });
 
+test("tower health layer files and README section are present", async () => {
+  const docs = await readdir("docs");
+  const dataFiles = await readdir("data");
+  const scripts = await readdir("scripts");
+  const readme = await readFile("README.md", "utf8");
+  const packageJson = JSON.parse(await readFile("package.json", "utf8"));
+
+  assert.ok(docs.includes("status.md"));
+  assert.ok(docs.includes("operations-checklist.md"));
+  assert.ok(dataFiles.includes("status.sample.json"));
+  assert.ok(scripts.includes("generate-status-report.mjs"));
+  assert.ok(readme.includes("Tower Health"));
+  assert.ok(readme.includes("reports/status-summary.json"));
+  assert.ok(packageJson.scripts["status:report"]);
+});
+
 test("README documents official public links", async () => {
   const readme = await readFile("README.md", "utf8");
 

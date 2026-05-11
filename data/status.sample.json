@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-05-11T00:00:00.000Z",
+  "siteAvailability": {
+    "status": "healthy",
+    "publicSite": "https://www.towermap.fun",
+    "lastMaintenanceWindow": "2026-05-09T08:30:00.000Z",
+    "maintenanceState": "complete"
+  },
+  "publicRoutes": {
+    "/": "healthy",
+    "/en": "healthy",
+    "/ja": "healthy",
+    "/methodology": "healthy",
+    "/profile/[slug]": "healthy"
+  },
+  "walletLayer": {
+    "walletConnect": "healthy",
+    "signedMessageLogin": "healthy",
+    "sessionCookies": "healthy",
+    "supportedWallets": ["Phantom", "Solflare", "Backpack"]
+  },
+  "operations": {
+    "registryReview": "active",
+    "analyticsSnapshot": "active",
+    "moderationWorkflow": "active",
+    "releaseChecks": "active"
+  },
+  "notes": [
+    "Public browsing remains open.",
+    "Wallet-gated actions remain session protected.",
+    "Pending verification items are tracked as scheduled review work."
+  ]
+}

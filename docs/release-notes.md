@@ -1,5 +1,21 @@
 # Release Notes
 
+## v1.1.6 - Tower Health And Status Layer
+
+Tower Map added a public operations health layer.
+
+Highlights:
+
+- Tower Health documentation
+- Operations checklist
+- Status sample data
+- Status report generation script
+- Generated `reports/status-summary.json`
+- Public route health summary
+- Wallet interaction readiness summary
+- Registry, moderation, analytics, and release health summary
+- Scheduled review items framed as tracked maintenance work
+
 ## v1.1.5 - Tower Pulse Implementation Plan
 
 Tower Map added implementation planning for the future Tower Pulse page.

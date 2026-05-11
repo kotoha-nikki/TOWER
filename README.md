@@ -26,8 +26,8 @@ This repository is the open build record for Tower Map.
 ## Current Release
 
 ```text
-version: 1.1.5
-status: public tower + wallet identity + saves + tenant notes + moderation + public analytics
+version: 1.1.6
+status: public tower + wallet identity + saves + tenant notes + moderation + analytics + tower health
 website: https://www.towermap.fun
 x: https://x.com/TowerMapFun
 repository: https://github.com/kotoha-nikki/TOWER
@@ -72,6 +72,7 @@ Tower Map gives that shape a public interface.
 - Moderation operations report
 - Public analytics snapshot
 - Tower Pulse implementation plan
+- Tower Health status summary
 - Node test suite and release checks
 
 ## Product Pillars
@@ -107,6 +108,18 @@ states, and wallet-level restriction logic so profiles can stay useful and safe.
 Tower Map produces its own public observation data from the registry, wallet
 saves, Tenant Notes activity, floor heat, category coverage, and contract
 verification status. This prepares the product for a future Tower Pulse page.
+
+**Tower health**
+
+Tower Map summarizes public route coverage, wallet readiness, registry review,
+moderation readiness, analytics freshness, and scheduled maintenance work into a
+healthy operations layer.
+
+## Moderation Model
+
+Tenant Notes use a visible-notes-only public read model. Hidden notes, deleted
+notes, content reports, and wallet-level restrictions are documented as
+moderation operations so public rooms stay readable as the tower grows.
 
 ## Tech Stack
 
@@ -182,6 +195,7 @@ npm run validate:data
 npm run registry:report
 npm run moderation:report
 npm run analytics:snapshot
+npm run status:report
 npm test
 npm run release:check
 ```
@@ -192,6 +206,7 @@ Generated reports:
 reports/registry-summary.json
 reports/moderation-summary.json
 reports/analytics-snapshot.json
+reports/status-summary.json
 ```
 
 Operations documentation:
@@ -201,6 +216,8 @@ docs/registry-operations.md
 docs/moderation.md
 docs/community-guidelines.md
 docs/analytics.md
+docs/status.md
+docs/operations-checklist.md
 docs/tower-pulse.md
 docs/tower-pulse-implementation.md
 ```

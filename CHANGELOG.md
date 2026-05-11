@@ -2,6 +2,17 @@
 
 All notable repository changes are documented here.
 
+## 1.1.6
+
+- Added Tower Health documentation.
+- Added operations checklist for daily public health passes.
+- Added status sample data.
+- Added status report generation script.
+- Added `npm run status:report`.
+- Added generated status summary output.
+- Updated QA to include Tower Health report generation.
+- Updated README with the Tower Health operations layer.
+
 ## 1.1.5
 
 - Added Tower Pulse implementation plan.
