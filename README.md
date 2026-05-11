@@ -20,6 +20,7 @@ This repository is the open build record for Tower Map.
 
 - Website: [towermap.fun](https://www.towermap.fun)
 - X: [@TowerMapFun](https://x.com/TowerMapFun)
+- Telegram: [Tower Map](https://t.me/TowerMap)
 - Repository: [kotoha-nikki/TOWER](https://github.com/kotoha-nikki/TOWER)
 - Releases: [Tower Map releases](https://github.com/kotoha-nikki/TOWER/releases)
 
@@ -30,6 +31,7 @@ version: 1.1.6
 status: public tower + wallet identity + saves + tenant notes + moderation + analytics + tower health
 website: https://www.towermap.fun
 x: https://x.com/TowerMapFun
+telegram: https://t.me/TowerMap
 repository: https://github.com/kotoha-nikki/TOWER
 ```
 

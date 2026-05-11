@@ -77,5 +77,6 @@ test("README documents official public links", async () => {
   assert.ok(readme.includes("## Official Links"));
   assert.ok(readme.includes("https://www.towermap.fun"));
   assert.ok(readme.includes("https://x.com/TowerMapFun"));
+  assert.ok(readme.includes("https://t.me/TowerMap"));
   assert.ok(readme.includes("https://github.com/kotoha-nikki/TOWER"));
 });
